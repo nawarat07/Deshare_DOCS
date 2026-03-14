@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1 Technical Layers - Deshare Whitepaper</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="Deshare Logo">
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav>
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">1. Overview</span>
+                    <a href="index.html">1. Executive Summary</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">2. Ecosystem</span>
+                    <a href="2-ecosystem.html">Ecosystem Overview</a>
+                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
+                    <a href="2-2-product-suite.html" class="sub-link">2.2 The Deshare Solution</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">3. Architecture</span>
+                    <a href="3-architecture.html">System Architecture</a>
+                    <a href="3-1-technical-architecture.html" class="sub-link active">3.1 Technical Layers</a>
+                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">4. Security</span>
+                    <a href="4-security.html">Security Framework</a>
+                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">5. Appendices</span>
+                    <a href="5-faq.html">5. Q&A</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>3.1 Technical Layers</h1>
+
+            <img src="https://doc.deshare.finance/~gitbook/image?url=https%3A%2F%2F2872978496-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FnVWSCvF3mPFrL4Ix0Cee%252Fuploads%252FR8oU9pEdS2QnkoW77GT3%252Ffile.excalidraw.svg%3Falt%3Dmedia%26token%3D594bf656-dc95-440d-bda2-3dd3bf26d649&width=768&dpr=3&quality=100&sign=7e836518&sv=2"
+                alt="Technical Architecture Diagram" class="content-image">
+
+            <section>
+                <h3>User Interaction Layer</h3>
+                <p>Supports sophisticated front-end DApp interactions exclusively via mainstream decentralized wallets
+                    (e.g., MetaMask, WalletConnect). Crucially, this layer acts as the user's transparent window into
+                    their entire portfolio. It facilitates hyper-responsive real-time price tracking, historical data
+                    visualization, intuitive order placement UI, and inherently seamless cryptographic wallet
+                    integration consistently without ever requiring friction-inducing email/password logins.</p>
+            </section>
+
+            <section>
+                <h3>Smart Contract Layer</h3>
+                <p>Handles the immutable core business logic fundamentally powering the protocol, such as trading
+                    algorithms, immediate settlement workflows, and asset identity mapping. The heavily audited smart
+                    contracts permanently deployed at this critical layer encode the essential, deterministic rules of
+                    the platform.</p>
+                <p>This on-chain layer robustly executes the most critical backend logic: verifying complex ECDSA RFQ
+                    signatures, precisely executing block trades via atomic escrow, rigorously maintaining tokenized
+                    asset balances, and programmatically managing the 1:1 mapping schema between actively circulating
+                    on-chain tokens and the deeply custodied real-world offline assets.</p>
+            </section>
+
+            <section>
+                <h3>Asset Custody & Off-Chain Service Layer</h3>
+                <p>The highly regulated bridge rigorously constructed between the decentralized blockchain and the
+                    strictly regulated traditional financial world. This profoundly robust off-chain infrastructural
+                    layer actively ensures the platform's overarching stability, ongoing legality, and continuous
+                    liquidity.</p>
+                <ul>
+                    <li><strong>Institutional-Grade Asset Custody:</strong> Aggressively partners with premier
+                        traditional finance mega-institutions (such as Interactive Brokers) to deploy genuinely
+                        segregated accounts securely handling underlying assets.</li>
+                    <li><strong>Liquidity Aggregator:</strong> Dynamically computationally integrates and structurally
+                        synchronizes high-throughput liquidity simultaneously from both native decentralized on-chain
+                        sources and our partnered, phenomenally liquid institutional brokerages. This systemic
+                        dual-source aggregation structurally ensures exceptionally deep, undeniably consistent live
+                        markets, functionally minimizing disruptive slippage.</li>
+                </ul>
+            </section>
+
+            <div class="nav-buttons">
+                <a href="3-architecture.html" class="nav-button">← Prev: System Architecture</a>
+                <a href="3-2-protocol-mechanism.html" class="nav-button">Next Section: 3.2 Protocol Mechanism →</a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

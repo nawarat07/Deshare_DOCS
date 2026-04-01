@@ -46,6 +46,20 @@
             margin-bottom: 0;
             line-height: 1.6;
         }
+
+        .qa-a ol {
+            margin: 12px 0 0 0;
+            padding-left: 24px;
+        }
+
+        .qa-a ol li {
+            margin-bottom: 8px;
+        }
+
+        .qa-a ol li::marker {
+            color: var(--accent);
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -96,45 +110,34 @@
             <h1>5. Frequently Asked Questions</h1>
 
             <div class="qa-box">
-                <h3 class="qa-q">How do you conclusively ensure the stocks I purchase are actually backed by real,
-                    tangible underlying assets?</h3>
-                <p class="qa-a">We fundamentally guarantee a strictly enforced 1:1 total anchoring peg to real-world
-                    blue-chip stocks exclusively through a heavily secured, completely transparent custodial legal
-                    structure. All corresponding underlying primary assets are continuously purchased and unequivocally
-                    held in legally isolated segregated accounts safely situated with our primary brokerage partner,
-                    Interactive Brokers. Furthermore, every consequential transaction is indelibly recorded
-                    transparently on-chain, definitively providing practically traceable, absolutely immutable
-                    mathematical proof of verified asset backing that any single person can cryptographically verify
-                    totally independently.</p>
+                <h3 class="qa-q">How do you ensure the stocks I purchase are backed by real underlying assets?</h3>
+                <p class="qa-a">We maintain a strict 1:1 peg to real-world blue-chip stocks through a transparent
+                    custodial structure. The underlying assets are purchased and held in segregated accounts with our
+                    primary brokerage partner, Interactive Brokers. Additionally, all transactions are recorded
+                    on-chain, allowing anyone to independently verify the asset backing.</p>
             </div>
 
             <div class="qa-box">
-                <h3 class="qa-q">Precisely how do I successfully fund my account and officially start trading?</h3>
-                <p class="qa-a">Principally because the Deshare protocol is structurally built on an inherently
-                    non-custodial decentralized architecture, we explicitly do not ever require you to hazardously
-                    deposit fiat funds directly into any vulnerable central platform wallet. To immediately begin
-                    trading, you simply must connect your preferred decentralized self-custodial Web3 wallet (e.g.,
-                    MetaMask, Rabby, WalletConnect) and essentially ensure it actively holds sufficient standard
-                    stablecoins (like native USDT or bridged USDC). When you confidently place an execution order, the
-                    audited smart contract will definitively directly and concurrently atomically swap out the
-                    stablecoin liquidity dynamically from your own wallet precisely for the correctly tokenized
-                    underlying asset. Immediately upon subsequently selling, all financial proceeds are automatically
-                    algorithmically routed cleanly straight back to the original funding wallet securely.</p>
+                <h3 class="qa-q">How do I fund my account and start trading?</h3>
+                <div class="qa-a">
+                    <p>The Deshare protocol is non-custodial, meaning you never have to deposit fiat funds into a
+                        centralized platform. To start trading:</p>
+                    <ol>
+                        <li>Connect your preferred Web3 wallet (e.g., MetaMask, Rabby, WalletConnect).</li>
+                        <li>Ensure your wallet holds standard stablecoins (like USDT or USDC).</li>
+                        <li>When you place an order, our audited smart contract automatically swaps your stablecoin for
+                            the tokenized asset. When you sell, the proceeds are routed directly back to your wallet.
+                        </li>
+                    </ol>
+                </div>
             </div>
 
             <div class="qa-box">
-                <h3 class="qa-q">Will my stock purchase execution price critically suffer severe slippage, and could it
-                    somehow end up being worse than traditional wholesale broker pricing spreads?</h3>
-                <p class="qa-a">Our deep order liquidity is technically supported by an exceptionally advanced
-                    proprietary dual-layer smart RFQ execution model: it draws continuously liquidity from both our
-                    heavily incentivized native on-chain automated liquidity pool structures as well as the massively
-                    aggregated deep offline liquidity of our numerous partnered high-volume traditional brokerages. By
-                    intelligently aggressively tapping straight into multiple competitive market makers simultaneously
-                    bidding actively for your personal unique order flow, we effectively ensure your core trades are
-                    decisively executed reliably with true institutional-grade volume liquidity. This complex structural
-                    bridging virtually eliminates almost all front-running slippage and effectively guarantees that you
-                    automatically secure a definitive price that is comprehensively comparable to—and very frequently
-                    distinctly better than—the vast majority of traditional legacy retail execution brokerage platforms.
+                <h3 class="qa-q">Will my trades suffer from slippage or poor pricing?</h3>
+                <p class="qa-a">We minimize slippage by using a dual-layer RFQ (Request for Quote) execution model.
+                    This model draws liquidity from both our on-chain pools and the aggregated order books of our
+                    partnered traditional brokerages. By routing your order to multiple competitive market makers, we
+                    ensure execution prices that are comparable to—and often better than—traditional retail brokerages.
                 </p>
             </div>
 

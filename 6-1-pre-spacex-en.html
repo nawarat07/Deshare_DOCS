@@ -5,49 +5,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre SpaceX PreIPO - Deshare</title>
+    <meta name="description" content="Participate in the Pre SpaceX PreIPO through Deshare's IPO Prime program. Gain mirrored economic exposure to SpaceX's post-IPO performance.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ── Hero Banner ── */
+        .campaign-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(33, 210, 210, 0.12) 0%, rgba(10, 10, 23, 0.95) 60%);
+            border: 1px solid rgba(33, 210, 210, 0.15);
+            border-radius: 12px;
+            padding: 48px 40px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .campaign-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(33, 210, 210, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .campaign-hero .badge {
+            display: inline-block;
+            background: rgba(33, 210, 210, 0.15);
+            border: 1px solid rgba(33, 210, 210, 0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+
+        .campaign-hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .campaign-hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* ── Section Cards ── */
         .campaign-section {
             background: rgba(22, 22, 35, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: border-color 0.2s;
+            padding: 32px;
+            margin-bottom: 28px;
+            transition: border-color 0.3s;
         }
 
         .campaign-section:hover {
-            border-color: rgba(33, 210, 210, 0.3);
+            border-color: rgba(33, 210, 210, 0.25);
         }
 
-        .info-grid {
+        .campaign-section h3 {
+            margin-top: 0;
+        }
+
+        /* ── Key Metrics Grid ── */
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
-            margin-top: 16px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            border-radius: 6px;
+            margin-top: 20px;
         }
 
-        .info-item {
+        .metric-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(33, 210, 210, 0.25);
+        }
+
+        .metric-card .metric-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: var(--font-mono);
+        }
+
+        .metric-card .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+
+        /* ── Timeline / Steps Flow ── */
+        .steps-flow {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 0;
+            margin-top: 20px;
+            position: relative;
         }
 
-        .info-label {
+        .step-item {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            padding-bottom: 28px;
+        }
+
+        .step-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .step-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(33, 210, 210, 0.15);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-weight: 700;
             font-size: 0.9rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .step-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(180deg, var(--accent) 0%, rgba(33, 210, 210, 0.1) 100%);
+            margin-top: 6px;
+        }
+
+        .step-item:last-child .step-line {
+            display: none;
+        }
+
+        .step-content h4 {
+            margin-top: 4px;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ── Fee Structure Table ── */
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .fee-table th {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .fee-table td {
             color: var(--text-secondary);
         }
 
-        .info-value {
-            font-size: 1.1rem;
+        .fee-table td:first-child {
             color: var(--text-primary);
             font-weight: 600;
+        }
+
+        .fee-table tbody tr:hover {
+            background: rgba(33, 210, 210, 0.04);
+        }
+
+        /* ── Disclaimer ── */
+        .disclaimer-box {
+            background: rgba(255, 180, 0, 0.04);
+            border: 1px solid rgba(255, 180, 0, 0.15);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-top: 12px;
+        }
+
+        .disclaimer-box h3 {
+            color: #ffb400;
+            margin-top: 0;
+        }
+
+        .disclaimer-box li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        /* ── Language Switcher ── */
+        .lang-switch {
+            display: inline-flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent);
+            color: #0a0a17;
+        }
+
+        .lang-switch a:not(.active) {
+            border: 1px solid rgba(33, 210, 210, 0.3);
+            color: var(--accent);
+        }
+
+        .lang-switch a:not(.active):hover {
+            background: rgba(33, 210, 210, 0.1);
+        }
+
+        /* ── Issuer Badge ── */
+        .issuer-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 16px;
+        }
+
+        .issuer-info .issuer-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(33, 210, 210, 0.2), rgba(33, 210, 210, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .issuer-info .issuer-detail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .issuer-info .issuer-name {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .issuer-info .issuer-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 2px;
         }
     </style>
 </head>
@@ -102,72 +362,187 @@
         </aside>
 
         <main class="main-content">
-            <h1>Pre SpaceX PreIPO Campaign</h1>
 
+            <!-- Language Switcher -->
+            <div class="lang-switch">
+                <a href="6-1-pre-spacex-zh.html">中文</a>
+                <a href="6-1-pre-spacex-en.html" class="active">English</a>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="campaign-hero">
+                <div class="badge">🚀 IPO Prime · Limited Campaign</div>
+                <h1>Pre SpaceX PreIPO</h1>
+                <p class="subtitle">Gain regulated, on-chain mirrored economic exposure to the world's most valuable private space technology company through Deshare's IPO Prime program — before its public listing.</p>
+            </div>
+
+            <!-- ─── Section 1: Project Overview ─── -->
             <div class="campaign-section">
-                <h3>Project Introduction</h3>
-                <p>SpaceX (Space Exploration Technologies Corp.) was founded by Elon Musk in 2002. It is dedicated to reducing satellite launch costs through reusable rockets and advancing commercial spaceflight. Its representative products include the Falcon 9, Dragon spacecraft, and Starship, with the long-term goal of enabling human colonization of Mars and multi-planetary existence. Pre SpaceX is a mapped token for assets issued by the regulated issuer DigiFT, designed to mirror the economic returns of SpaceX after its IPO.</p>
+                <h3>Project Overview</h3>
+                <p>SpaceX (Space Exploration Technologies Corp.) was founded by Elon Musk in 2002 and has become the undisputed global leader in commercial spaceflight. Its core competitive advantage lies in its proprietary reusable rocket technology, which has fundamentally reduced launch costs and accelerated humanity's access to space.</p>
+                <p>SpaceX's core product portfolio includes:</p>
+                <ul>
+                    <li><strong>Falcon 9:</strong> The world's first orbital-class rocket to achieve first-stage booster recovery and reuse. It has completed hundreds of commercial missions, providing reliable launch services for both government and commercial customers.</li>
+                    <li><strong>Dragon:</strong> The primary spacecraft for NASA's International Space Station cargo and crewed missions. It is currently the only active commercial spacecraft capable of both crewed and cargo operations.</li>
+                    <li><strong>Starship:</strong> The next-generation fully reusable heavy-lift launch system currently under development. Designed to support lunar base construction and crewed Mars colonization, it is regarded as critical infrastructure for making humanity a multi-planetary species.</li>
+                    <li><strong>Starlink:</strong> The world's largest satellite internet constellation, providing high-speed, low-latency internet access to underserved regions globally through thousands of low-Earth orbit satellites. It already serves millions of active subscribers.</li>
+                </ul>
 
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">Token Name</span>
-                        <span class="info-value">PreSPX</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">SpaceX Implied Valuation</span>
-                        <span class="info-value">$1.5 Trillion</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Total IPO Prime Subscription</span>
-                        <span class="info-value">10,000</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Total Subscription Value</span>
-                        <span class="info-value">$500,000</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Subscription Price</span>
-                        <span class="info-value">1 PreSPX = $50</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Fee</span>
-                        <span class="info-value">5%</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Carry</span>
-                        <span class="info-value">15%</span>
+                <div class="issuer-info">
+                    <div class="issuer-icon">🏛</div>
+                    <div class="issuer-detail">
+                        <span class="issuer-name">Regulated Issuer · DigiFT</span>
+                        <span class="issuer-desc">PreSPX is a mapped token issued by the licensed issuer DigiFT under a regulated compliance framework. It is designed to track and mirror SpaceX's post-IPO economic performance, providing investors with a compliant on-chain participation pathway.</span>
                     </div>
                 </div>
             </div>
 
+            <!-- ─── Section 2: Key Metrics ─── -->
+            <div class="campaign-section">
+                <h3>Key Subscription Parameters</h3>
+                <p>Below is a summary of the key subscription data for this IPO Prime campaign:</p>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">PreSPX</div>
+                        <div class="metric-label">Token Name</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$1.5T</div>
+                        <div class="metric-label">SpaceX Implied Valuation</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">10,000</div>
+                        <div class="metric-label">Total IPO Prime Supply</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$500K</div>
+                        <div class="metric-label">Total Subscription Value</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$50</div>
+                        <div class="metric-label">Price per PreSPX</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">5%</div>
+                        <div class="metric-label">Subscription Fee</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">15%</div>
+                        <div class="metric-label">Performance Carry</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ─── Section 3: How IPO Prime Works ─── -->
             <div class="campaign-section">
                 <h3>How does IPO Prime work?</h3>
-                <p>Just like previously issued IPO subscription assets on Deshare. The more you invest, the larger your allocated share!</p>
-                <p>Each user's investment amount cannot exceed their personal investment limit.</p>
+                <p>IPO Prime follows the same proven mechanism as previously issued IPO subscription assets on Deshare. The core principle is straightforward: <strong>the more you invest, the larger your allocated share.</strong></p>
+                <div class="steps-flow">
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">1</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>Connect Wallet & Prepare Funds</h4>
+                            <p>Connect your Web3 wallet (e.g., MetaMask, Rabby, WalletConnect) and ensure it holds sufficient USDT or USDC stablecoins for subscription.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">2</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>Submit Subscription</h4>
+                            <p>Select your desired subscription amount on the campaign page and confirm the transaction. Deshare's audited smart contract will automatically lock your stablecoins and process the allocation. Each user's investment is subject to individual investment limits.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">3</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>Token Allocation</h4>
+                            <p>After the subscription period closes, the system allocates PreSPX tokens to each participant proportionally based on the final oversubscription ratio. Any unallocated funds are automatically refunded to your wallet.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">4</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>Hold or Trade</h4>
+                            <p>Successfully allocated PreSPX tokens can be held in your wallet to await final settlement, or traded on the OTC market that opens following the distribution period.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- ─── Section 4: Fee Structure ─── -->
             <div class="campaign-section">
-                <h3>How are fees and carry charged?</h3>
-                <p>The fee includes the subscription fee and the management fee of the underlying fund, which are collected uniformly at the time of purchase. Carry refers to the share of profits collected by the fund, which is charged by the underlying fund of the asset.</p>
+                <h3>Fee Structure</h3>
+                <p>We are committed to complete fee transparency. Below is a breakdown of all fees associated with this campaign:</p>
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>Fee Type</th>
+                            <th>Rate</th>
+                            <th>When Charged</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Subscription Fee</td>
+                            <td>Included in 5%</td>
+                            <td>At time of purchase</td>
+                            <td>Covers the platform service fee and the management fee of the underlying fund. Deducted as a single charge at the point of subscription.</td>
+                        </tr>
+                        <tr>
+                            <td>Performance Carry</td>
+                            <td>15%</td>
+                            <td>At settlement</td>
+                            <td>A performance-based fee charged only on profits generated. Deducted by the underlying fund at the time of final asset settlement or redemption. No carry is charged if no profit is realized.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
+            <!-- ─── Section 5: Trading & Settlement ─── -->
             <div class="campaign-section">
-                <h3>How to trade and settle preSPAX?</h3>
-                <p>After the IPO Prime token distribution ends, tokens can be freely transferred and traded over-the-counter according to the rules.</p>
-                <p>Additionally, you may wait for the lock-up period of the underlying debt assets to end (usually about 6 months after the SpaceX IPO). The issuer will delegate Bitget to redeem the tokens for equity tokens or USDT for users proportionally, using the target company's stock market price as a reference and deducting the carry funds. Please refer to the subscription agreement for specific details.</p>
+                <h3>Trading & Settlement</h3>
+                <p>The complete lifecycle of PreSPX tokens encompasses the following stages:</p>
+
+                <h4 style="margin-top: 20px;">Phase 1: Open Trading (Post-Distribution)</h4>
+                <p>Once the IPO Prime token distribution is complete, PreSPX tokens become freely transferable. Users may buy and sell PreSPX on the <strong>over-the-counter (OTC) market</strong> that opens following the allocation, subject to platform trading rules. Market prices are determined freely by supply and demand.</p>
+
+                <h4>Phase 2: Final Settlement (Post Lock-Up Period)</h4>
+                <p>After SpaceX officially goes public, the underlying debt assets are typically subject to a lock-up period of approximately <strong>6 months</strong>. Once the lock-up period expires, the issuer will delegate Bitget to complete the final settlement according to the following terms:</p>
+                <ul>
+                    <li><strong>Price Reference:</strong> The real-time market trading price of SpaceX stock on the public secondary market serves as the settlement benchmark.</li>
+                    <li><strong>Fee Deduction:</strong> The 15% performance carry is deducted from the settlement amount (applied only to the profit portion).</li>
+                    <li><strong>Settlement Form:</strong> Users may receive their proceeds proportionally in the form of <strong>equity tokens</strong> or <strong>USDT</strong>, as specified in the subscription agreement.</li>
+                </ul>
+                <p style="color: var(--accent); font-style: italic; font-size: 0.9rem;">📄 Final settlement terms are subject to the subscription agreement signed by the user.</p>
             </div>
 
-            <div class="campaign-section">
-                <h3>Terms and Conditions</h3>
-                <ul style="color: var(--text-secondary); line-height: 1.6; margin-top: 8px;">
-                    <li>preSPAX only represents the mirrored rights to the economic returns after SpaceX goes public, and is not a direct investment in SpaceX.</li>
-                    <li>There is no legal relationship between preSPAX and SpaceX, and SpaceX has not made any endorsement, approval, or authorization for this product.</li>
-                    <li>This campaign is only available in select markets and is not open to residents of certain jurisdictions.</li>
+            <!-- ─── Section 6: Disclaimer ─── -->
+            <div class="disclaimer-box">
+                <h3>⚠️ Important Terms & Risk Disclosure</h3>
+                <ul>
+                    <li><strong>Nature of Rights:</strong> PreSPX represents only a mirrored economic interest in SpaceX's post-IPO performance. It does not constitute a direct investment in, or ownership of, SpaceX equity.</li>
+                    <li><strong>Non-Affiliation Disclaimer:</strong> There is no legal relationship between PreSPX and SpaceX. SpaceX has not endorsed, approved, or authorized this product in any way. This offering is not associated with SpaceX, Inc. or any of its affiliates.</li>
+                    <li><strong>Jurisdictional Restrictions:</strong> This campaign is available only in select markets and is not open to residents of the United States, Mainland China, or other restricted jurisdictions. Users are responsible for confirming their eligibility based on their jurisdiction of residence.</li>
+                    <li><strong>Investment Risk:</strong> All investments carry risk, including but not limited to the total or partial loss of principal. The value of PreSPX is subject to market volatility, the progress of SpaceX's IPO, and broader macroeconomic conditions. Past performance is not indicative of future results.</li>
+                    <li><strong>Liquidity Risk:</strong> PreSPX may experience limited secondary market liquidity prior to the expiration of the lock-up period. Participants should be prepared for a potentially extended holding period.</li>
                 </ul>
             </div>
 
             <div class="nav-buttons">
-                <a href="6-1-pre-spacex-zh.html" class="nav-button">← Prev: Pre SpaceX (中文)</a>
+                <a href="6-1-pre-spacex-zh.html" class="nav-button">← 中文版本</a>
                 <div></div>
             </div>
         </main>

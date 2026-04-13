@@ -5,49 +5,309 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pre SpaceX PreIPO - Deshare</title>
+    <meta name="description" content="通过 Deshare IPO Prime 参与 Pre SpaceX PreIPO 认购，获取 SpaceX 上市后的镜像经济收益权益。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
+        /* ── Hero Banner ── */
+        .campaign-hero {
+            position: relative;
+            background: linear-gradient(135deg, rgba(33, 210, 210, 0.12) 0%, rgba(10, 10, 23, 0.95) 60%);
+            border: 1px solid rgba(33, 210, 210, 0.15);
+            border-radius: 12px;
+            padding: 48px 40px;
+            margin-bottom: 40px;
+            overflow: hidden;
+        }
+
+        .campaign-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(33, 210, 210, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .campaign-hero .badge {
+            display: inline-block;
+            background: rgba(33, 210, 210, 0.15);
+            border: 1px solid rgba(33, 210, 210, 0.3);
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.8rem;
+            font-family: var(--font-mono);
+            color: var(--accent);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 20px;
+        }
+
+        .campaign-hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+        }
+
+        .campaign-hero .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 640px;
+            line-height: 1.7;
+        }
+
+        /* ── Section Cards ── */
         .campaign-section {
             background: rgba(22, 22, 35, 0.7);
             border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: border-color 0.2s;
+            padding: 32px;
+            margin-bottom: 28px;
+            transition: border-color 0.3s;
         }
 
         .campaign-section:hover {
-            border-color: rgba(33, 210, 210, 0.3);
+            border-color: rgba(33, 210, 210, 0.25);
         }
 
-        .info-grid {
+        .campaign-section h3 {
+            margin-top: 0;
+        }
+
+        /* ── Key Metrics Grid ── */
+        .metrics-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 16px;
-            margin-top: 16px;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 16px;
-            border-radius: 6px;
+            margin-top: 20px;
         }
 
-        .info-item {
+        .metric-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(33, 210, 210, 0.25);
+        }
+
+        .metric-card .metric-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: var(--font-mono);
+        }
+
+        .metric-card .metric-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+
+        /* ── Timeline / Steps Flow ── */
+        .steps-flow {
             display: flex;
             flex-direction: column;
-            gap: 4px;
+            gap: 0;
+            margin-top: 20px;
+            position: relative;
         }
 
-        .info-label {
+        .step-item {
+            display: flex;
+            gap: 20px;
+            position: relative;
+            padding-bottom: 28px;
+        }
+
+        .step-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .step-indicator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .step-number {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(33, 210, 210, 0.15);
+            border: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-weight: 700;
             font-size: 0.9rem;
+            color: var(--accent);
+            flex-shrink: 0;
+        }
+
+        .step-line {
+            width: 2px;
+            flex: 1;
+            background: linear-gradient(180deg, var(--accent) 0%, rgba(33, 210, 210, 0.1) 100%);
+            margin-top: 6px;
+        }
+
+        .step-item:last-child .step-line {
+            display: none;
+        }
+
+        .step-content h4 {
+            margin-top: 4px;
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ── Fee Structure Table ── */
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+            font-size: 0.95rem;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            text-align: left;
+            padding: 14px 16px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .fee-table th {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .fee-table td {
             color: var(--text-secondary);
         }
 
-        .info-value {
-            font-size: 1.1rem;
+        .fee-table td:first-child {
             color: var(--text-primary);
             font-weight: 600;
+        }
+
+        .fee-table tbody tr:hover {
+            background: rgba(33, 210, 210, 0.04);
+        }
+
+        /* ── Disclaimer ── */
+        .disclaimer-box {
+            background: rgba(255, 180, 0, 0.04);
+            border: 1px solid rgba(255, 180, 0, 0.15);
+            border-radius: 8px;
+            padding: 24px 28px;
+            margin-top: 12px;
+        }
+
+        .disclaimer-box h3 {
+            color: #ffb400;
+            margin-top: 0;
+        }
+
+        .disclaimer-box li {
+            color: var(--text-secondary);
+            font-size: 0.92rem;
+        }
+
+        /* ── Language Switcher ── */
+        .lang-switch {
+            display: inline-flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .lang-switch a {
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            transition: all 0.2s;
+        }
+
+        .lang-switch a.active {
+            background: var(--accent);
+            color: #0a0a17;
+        }
+
+        .lang-switch a:not(.active) {
+            border: 1px solid rgba(33, 210, 210, 0.3);
+            color: var(--accent);
+        }
+
+        .lang-switch a:not(.active):hover {
+            background: rgba(33, 210, 210, 0.1);
+        }
+
+        /* ── Issuer Badge ── */
+        .issuer-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-top: 16px;
+        }
+
+        .issuer-info .issuer-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(33, 210, 210, 0.2), rgba(33, 210, 210, 0.05));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .issuer-info .issuer-detail {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .issuer-info .issuer-name {
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .issuer-info .issuer-desc {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-top: 2px;
         }
     </style>
 </head>
@@ -102,73 +362,188 @@
         </aside>
 
         <main class="main-content">
-            <h1>Pre SpaceX PreIPO 活动</h1>
 
+            <!-- Language Switcher -->
+            <div class="lang-switch">
+                <a href="6-1-pre-spacex-zh.html" class="active">中文</a>
+                <a href="6-1-pre-spacex-en.html">English</a>
+            </div>
+
+            <!-- Hero Banner -->
+            <div class="campaign-hero">
+                <div class="badge">🚀 IPO Prime · 限时活动</div>
+                <h1>Pre SpaceX PreIPO</h1>
+                <p class="subtitle">通过 Deshare IPO Prime 计划，在全球最具价值私营太空科技公司上市前，以合规方式获取其经济收益的链上镜像权益。</p>
+            </div>
+
+            <!-- ─── Section 1: Project Overview ─── -->
             <div class="campaign-section">
                 <h3>项目简介</h3>
-                <p>SpaceX（太空探索技术公司）由埃隆·马斯克于2002年创立，致力于以可重复使用火箭降低发射成本，推动商业航天发展。其代表产品包括猎鹰9号、龙飞船与星舰，长期目标是实现载人火星与多行星生存。pre spaceX是由受监管发行方 DigiFT 发行资产的映射代币，旨在反映SpaceX公司IPO上市后的经济收益表现。</p>
+                <p>SpaceX（太空探索技术公司）由埃隆·马斯克于 2002 年创立，是全球商业航天领域的领军者。公司以自主研发的可重复使用火箭技术为核心竞争力，致力于通过大幅降低发射成本来加速人类的太空探索进程。</p>
+                <p>SpaceX 的核心产品矩阵包括：</p>
+                <ul>
+                    <li><strong>猎鹰 9 号 (Falcon 9)：</strong>全球首款实现轨道级一级助推器回收复用的运载火箭，已完成数百次商业发射任务，为政府与商业客户提供可靠的入轨服务。</li>
+                    <li><strong>龙飞船 (Dragon)：</strong>为 NASA 执行国际空间站货运和载人航天任务的主力飞船，是当前唯一具备载人与货运双向能力的在役商用飞船。</li>
+                    <li><strong>星舰 (Starship)：</strong>正在研发中的下一代全复用重型运载系统，设计目标为支持月球基地建设与火星载人殖民，是人类迈向多行星物种的关键基础设施。</li>
+                    <li><strong>星链 (Starlink)：</strong>全球最大的卫星互联网星座，通过数千颗低轨道卫星为全球偏远地区提供高速、低延迟的互联网接入，已拥有数百万活跃用户。</li>
+                </ul>
 
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="info-label">币种名称</span>
-                        <span class="info-value">PreSPX</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">SpaceX隐含估值</span>
-                        <span class="info-value">$1.5万亿</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">IPO Prime 认购总量</span>
-                        <span class="info-value">10,000</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">认购总价值</span>
-                        <span class="info-value">$500,000</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">认购价格</span>
-                        <span class="info-value">1 PreSPX = $50</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">手续费</span>
-                        <span class="info-value">5%</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="info-label">Carry（利润分成）</span>
-                        <span class="info-value">15%</span>
+                <div class="issuer-info">
+                    <div class="issuer-icon">🏛</div>
+                    <div class="issuer-detail">
+                        <span class="issuer-name">受监管发行方 · DigiFT</span>
+                        <span class="issuer-desc">PreSPX 是由持牌发行方 DigiFT 依据合规框架发行的映射代币，旨在追踪和反映 SpaceX 公司 IPO 上市后的经济收益表现，为投资者提供合规的链上参与路径。</span>
                     </div>
                 </div>
             </div>
 
+            <!-- ─── Section 2: Key Metrics ─── -->
             <div class="campaign-section">
-                <h3>IPO Prime 如何运作？</h3>
-                <p>与deshare之前发行的IPO打新资产一样。投入越多，认购份额越大！</p>
-                <p>每位用户的投入金额不得超过个人投入限额。</p>
+                <h3>核心认购参数</h3>
+                <p>以下是本期 IPO Prime 活动的关键认购数据概览：</p>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">PreSPX</div>
+                        <div class="metric-label">币种名称</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$1.5T</div>
+                        <div class="metric-label">SpaceX 隐含估值</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">10,000</div>
+                        <div class="metric-label">IPO Prime 认购总量</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$500K</div>
+                        <div class="metric-label">认购总价值</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">$50</div>
+                        <div class="metric-label">单价 (1 PreSPX)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">5%</div>
+                        <div class="metric-label">手续费</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">15%</div>
+                        <div class="metric-label">Carry（利润分成）</div>
+                    </div>
+                </div>
             </div>
 
+            <!-- ─── Section 3: How IPO Prime Works ─── -->
             <div class="campaign-section">
-                <h3>手续费和carry如何收取？</h3>
-                <p>手续费包含了认购手续费以及底层基金的管理费，购买时统一收取。carry指的是由基金收取的盈利部分的分成，由资产的底层基金收取。</p>
+                <h3>IPO PRIME 如何运作？</h3>
+                <p>IPO Prime 采用与 Deshare 此前发行的 IPO 打新资产相同的成熟机制。核心原则简洁明了：<strong>投入越多，认购份额越大。</strong></p>
+                <div class="steps-flow">
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">1</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>钱包连接 & 资产准备</h4>
+                            <p>连接您的 Web3 钱包（如 MetaMask、Rabby、WalletConnect），并确保钱包中持有足够的 USDT 或 USDC 稳定币用于认购。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">2</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>提交认购</h4>
+                            <p>在活动页面选择认购数量并确认交易。Deshare 审计智能合约将自动完成稳定币的锁定和 PreSPX 代币的分配。每位用户的投入金额不得超过个人投入限额。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">3</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>代币分配</h4>
+                            <p>认购结束后，系统根据最终超额认购比例，按比例向每位参与者分配 PreSPX 代币。未认购成功的部分将自动退还至您的钱包。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-indicator">
+                            <div class="step-number">4</div>
+                            <div class="step-line"></div>
+                        </div>
+                        <div class="step-content">
+                            <h4>持有或交易</h4>
+                            <p>成功获得的 PreSPX 代币可在您的钱包中持有以等待最终交割，也可在后续开放的场外交易市场根据规则进行买卖。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- ─── Section 4: Fee Structure ─── -->
             <div class="campaign-section">
-                <h3>preSPAX如何交易及交割？</h3>
-                <p>IPO Prime代币分配结束后，代币可自由转让和场外交易，根据规则买卖代币。</p>
-                <p>此外，亦可等待代币底层债务资产禁售期结束（通常在SpaceX IPO上市约6个月后），由发行方委托Bitget按照标的企业股票市场价格作为参照，扣除carry资金后按比例为用户兑换为股票代币或USDT，具体请以认购协议为准。</p>
+                <h3>费用结构说明</h3>
+                <p>我们致力于费用的完全透明。以下是本次活动涉及的所有费用项目：</p>
+                <table class="fee-table">
+                    <thead>
+                        <tr>
+                            <th>费用类型</th>
+                            <th>比率</th>
+                            <th>收取时点</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>认购手续费</td>
+                            <td>包含在 5% 内</td>
+                            <td>认购时一次性收取</td>
+                            <td>包含平台服务费及底层基金的管理费用，在用户购买时统一扣除。</td>
+                        </tr>
+                        <tr>
+                            <td>Carry（利润分成）</td>
+                            <td>15%</td>
+                            <td>资产交割时收取</td>
+                            <td>仅针对盈利部分收取的业绩报酬，由底层基金在最终资产交割或赎回时扣除。若最终未产生盈利，则不收取此费用。</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
+            <!-- ─── Section 5: Trading & Settlement ─── -->
             <div class="campaign-section">
-                <h3>条款和条件</h3>
-                <ul style="color: var(--text-secondary); line-height: 1.6; margin-top: 8px;">
-                    <li>preSPAX仅代表对SpaceX上市后经济收益的镜像权益，并非对SpaceX的直接投资。</li>
-                    <li>preSPAX与SpaceX之间不存在任何法律关系，SpaceX未就本产品作出任何背书、认可或授权。</li>
-                    <li>此活动仅在特定市场开放，不面向特定司法管辖区的居民。</li>
+                <h3>交易与交割机制</h3>
+                <p>PreSPX 代币的完整生命周期涵盖以下阶段：</p>
+
+                <h4 style="margin-top: 20px;">阶段一：自由交易（代币分配后）</h4>
+                <p>IPO Prime 代币分配结束后，PreSPX 代币即可自由转让。用户可在随后开放的<strong>场外交易（OTC）市场</strong>中，根据平台交易规则进行 PreSPX 的买入与卖出操作。代币的市场价格由供需关系自由决定。</p>
+
+                <h4>阶段二：最终交割（IPO 禁售期结束后）</h4>
+                <p>SpaceX 正式 IPO 上市后，底层债务资产通常需经历约 <strong>6 个月</strong>的禁售锁定期。禁售期结束后，由发行方委托 Bitget 按照以下规则完成最终交割：</p>
+                <ul>
+                    <li><strong>价格参照：</strong>以 SpaceX 股票在公开二级市场的实时交易价格作为结算参照基准。</li>
+                    <li><strong>费用扣除：</strong>在结算金额中扣除 15% 的 Carry 利润分成（仅针对盈利部分）。</li>
+                    <li><strong>交割形式：</strong>用户可按比例兑换为<strong>股票代币</strong>或<strong>USDT</strong>，具体以认购协议约定为准。</li>
+                </ul>
+                <p style="color: var(--accent); font-style: italic; font-size: 0.9rem;">📄 最终交割条款以用户签署的认购协议为准。</p>
+            </div>
+
+            <!-- ─── Section 6: Disclaimer ─── -->
+            <div class="disclaimer-box">
+                <h3>⚠️ 重要条款与风险提示</h3>
+                <ul>
+                    <li><strong>权益性质：</strong>PreSPX 仅代表对 SpaceX 上市后经济收益的镜像权益（Mirrored Economic Interest），并非对 SpaceX 公司股权的直接投资或所有权凭证。</li>
+                    <li><strong>非关联声明：</strong>PreSPX 与 SpaceX 之间不存在任何法律关联关系。SpaceX 未就本产品作出任何背书、认可或授权，与 SpaceX, Inc. 或其任何关联实体无关。</li>
+                    <li><strong>司法管辖限制：</strong>此活动仅在特定市场开放，不面向美国、中国大陆及其他受限司法管辖区的居民。用户有责任确认自身是否属于允许参与的司法辖区。</li>
+                    <li><strong>投资风险：</strong>所有投资均存在风险，包括但不限于本金的全部或部分损失。PreSPX 的价值将受到市场波动、SpaceX 上市进程及宏观经济环境等多重因素影响。过往收益不代表未来表现。</li>
+                    <li><strong>流动性风险：</strong>PreSPX 在禁售期结束前可能面临有限的二级市场流动性，请做好长期持有准备。</li>
                 </ul>
             </div>
 
             <div class="nav-buttons">
-                <a href="5-faq.html" class="nav-button">← Prev: 5. Q&A</a>
-                <a href="6-1-pre-spacex-en.html" class="nav-button">Next: Pre SpaceX (EN) →</a>
+                <a href="5-faq.html" class="nav-button">← 上一篇: Q&A</a>
+                <a href="6-1-pre-spacex-en.html" class="nav-button">English Version →</a>
             </div>
         </main>
     </div>

@@ -335,3 +335,56 @@ code {
     border-left-color: var(--accent);
     background-color: rgba(33, 210, 210, 0.08);
 }
+
+/* ── Mobile Responsive ── */
+@media (max-width: 768px) {
+    header {
+        padding: 0 16px;
+        height: 56px;
+    }
+
+    .layout {
+        margin-top: 56px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 24px 16px;
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 40px;
+    }
+
+    .nav-button {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .custody-row {
+        flex-direction: column;
+    }
+}

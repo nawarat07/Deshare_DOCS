@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre SpaceX PreIPO - Deshare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .campaign-section {
+            background: rgba(22, 22, 35, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 24px;
+            transition: border-color 0.2s;
+        }
+
+        .campaign-section:hover {
+            border-color: rgba(33, 210, 210, 0.3);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 6px;
+        }
+
+        .info-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .info-value {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="Deshare Logo">
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav>
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">1. Overview</span>
+                    <a href="index.html">1. Executive Summary</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">2. Platform Features</span>
+                    <a href="2-platform-features.html">Platform Overview</a>
+                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
+                    <a href="2-2-product-suite.html" class="sub-link">2.2 The Deshare Solution</a>
+                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">3. Architecture</span>
+                    <a href="3-architecture.html">System Architecture</a>
+                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
+                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">4. Security</span>
+                    <a href="4-security.html">Security Framework</a>
+                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">5. Appendices</span>
+                    <a href="5-faq.html">5. Q&A</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">6. 活动 (Campaigns)</span>
+                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (中文)</a>
+                    <a href="6-1-pre-spacex-en.html" class="sub-link active">Pre SpaceX (EN)</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Pre SpaceX PreIPO Campaign</h1>
+
+            <div class="campaign-section">
+                <h3>Project Introduction</h3>
+                <p>SpaceX (Space Exploration Technologies Corp.) was founded by Elon Musk in 2002. It is dedicated to reducing satellite launch costs through reusable rockets and advancing commercial spaceflight. Its representative products include the Falcon 9, Dragon spacecraft, and Starship, with the long-term goal of enabling human colonization of Mars and multi-planetary existence. Pre SpaceX is a mapped token for assets issued by the regulated issuer DigiFT, designed to mirror the economic returns of SpaceX after its IPO.</p>
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <span class="info-label">Token Name</span>
+                        <span class="info-value">PreSPX</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">SpaceX Implied Valuation</span>
+                        <span class="info-value">$1.5 Trillion</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total IPO Prime Subscription</span>
+                        <span class="info-value">10,000</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total Subscription Value</span>
+                        <span class="info-value">$500,000</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Subscription Price</span>
+                        <span class="info-value">1 PreSPX = $50</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Fee</span>
+                        <span class="info-value">5%</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Carry</span>
+                        <span class="info-value">15%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="campaign-section">
+                <h3>How does IPO Prime work?</h3>
+                <p>Just like previously issued IPO subscription assets on Deshare. The more you invest, the larger your allocated share!</p>
+                <p>Each user's investment amount cannot exceed their personal investment limit.</p>
+            </div>
+
+            <div class="campaign-section">
+                <h3>How are fees and carry charged?</h3>
+                <p>The fee includes the subscription fee and the management fee of the underlying fund, which are collected uniformly at the time of purchase. Carry refers to the share of profits collected by the fund, which is charged by the underlying fund of the asset.</p>
+            </div>
+
+            <div class="campaign-section">
+                <h3>How to trade and settle preSPAX?</h3>
+                <p>After the IPO Prime token distribution ends, tokens can be freely transferred and traded over-the-counter according to the rules.</p>
+                <p>Additionally, you may wait for the lock-up period of the underlying debt assets to end (usually about 6 months after the SpaceX IPO). The issuer will delegate Bitget to redeem the tokens for equity tokens or USDT for users proportionally, using the target company's stock market price as a reference and deducting the carry funds. Please refer to the subscription agreement for specific details.</p>
+            </div>
+
+            <div class="campaign-section">
+                <h3>Terms and Conditions</h3>
+                <ul style="color: var(--text-secondary); line-height: 1.6; margin-top: 8px;">
+                    <li>preSPAX only represents the mirrored rights to the economic returns after SpaceX goes public, and is not a direct investment in SpaceX.</li>
+                    <li>There is no legal relationship between preSPAX and SpaceX, and SpaceX has not made any endorsement, approval, or authorization for this product.</li>
+                    <li>This campaign is only available in select markets and is not open to residents of certain jurisdictions.</li>
+                </ul>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="6-1-pre-spacex-zh.html" class="nav-button">← Prev: Pre SpaceX (中文)</a>
+                <div></div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

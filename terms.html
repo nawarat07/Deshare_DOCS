@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - DeShare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .legal-effective {
+            color: var(--accent);
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            margin-bottom: 2em;
+            display: block;
+        }
+
+        .legal-section {
+            background: rgba(22, 22, 35, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin-bottom: 28px;
+            transition: border-color 0.2s;
+        }
+
+        .legal-section:hover {
+            border-color: rgba(33, 210, 210, 0.3);
+        }
+
+        .legal-section h2 {
+            margin-top: 0;
+            font-size: 1.35rem;
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-bottom: 0.75em;
+        }
+
+        .legal-section h3 {
+            font-size: 1rem;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            text-transform: none;
+            letter-spacing: 0;
+        }
+
+        .legal-section p,
+        .legal-section li {
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .legal-section ol {
+            list-style-type: lower-alpha;
+            padding-left: 24px;
+        }
+
+        .legal-section ol li {
+            padding-left: 6px;
+        }
+
+        .legal-section ol li::before {
+            content: none;
+        }
+
+        .legal-section ul li::before {
+            content: '•';
+        }
+
+        .legal-intro {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 2.5em;
+            color: var(--text-secondary);
+        }
+
+        .legal-contact-box {
+            background: linear-gradient(180deg, rgba(33, 210, 210, 0.08) 0%, rgba(22, 22, 35, 0.7) 100%);
+            border: 1px solid rgba(33, 210, 210, 0.2);
+            border-radius: 8px;
+            padding: 28px 32px;
+            margin-top: 40px;
+        }
+
+        .legal-contact-box h2 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .legal-contact-box a {
+            color: var(--accent);
+            text-decoration: none;
+            font-family: var(--font-mono);
+        }
+
+        .legal-contact-box a:hover {
+            color: var(--accent-hover);
+            text-decoration: underline;
+        }
+
+        .legal-toc {
+            background: rgba(22, 22, 35, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 24px 32px;
+            margin-bottom: 40px;
+        }
+
+        .legal-toc h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+        }
+
+        .legal-toc ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+            margin: 0;
+            columns: 2;
+            column-gap: 32px;
+        }
+
+        .legal-toc ol li {
+            padding-left: 4px;
+            margin-bottom: 6px;
+            font-size: 0.88rem;
+        }
+
+        .legal-toc ol li::before {
+            content: none;
+        }
+
+        .legal-toc ol li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .legal-toc ol li a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .legal-section {
+                padding: 20px 18px;
+            }
+
+            .legal-toc ol {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.svg" alt="DeShare Logo">
+        </div>
+    </header>
+
+    <div class="layout">
+        <aside class="sidebar">
+            <nav>
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">1. Overview</span>
+                    <a href="index.html">1. Executive Summary</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">2. Platform Features</span>
+                    <a href="2-platform-features.html">Platform Overview</a>
+                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
+                    <a href="2-2-product-suite.html" class="sub-link">2.2 The DeShare Solution</a>
+                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">3. Architecture</span>
+                    <a href="3-architecture.html">System Architecture</a>
+                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
+                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">4. Security</span>
+                    <a href="4-security.html">Security Framework</a>
+                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">5. Appendices</span>
+                    <a href="5-faq.html">5. Q&A</a>
+                </div>
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">6. Campaigns</span>
+                    <a href="6-1-pre-spacex-en.html" class="sub-link">Pre SpaceX (EN)</a>
+                    <a href="6-2-pre-anthropic-zh.html" class="sub-link">Pre Anthropic (中文)</a>
+                    <a href="6-2-pre-anthropic-en.html" class="sub-link">Pre Anthropic (EN)</a>
+                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (ZH)</a>
+                </div>
+
+                <div class="sidebar-group">
+                    <span class="sidebar-group-title">7. Legal</span>
+                    <a href="terms.html" class="sub-link active">Terms of Service</a>
+                    <a href="privacy.html" class="sub-link">Privacy Policy</a>
+                </div>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <h1>Terms of Service</h1>
+            <span class="legal-effective">Effective Date: January 10, 2026 &nbsp;|&nbsp; Last Updated: January 10, 2026</span>
+
+            <p class="legal-intro">
+                These Terms of Service ("<strong>Terms</strong>") constitute a legally binding agreement between you ("<strong>User</strong>," "<strong>you</strong>," or "<strong>your</strong>") and DeShare Limited, a company incorporated under the laws of the British Virgin Islands ("<strong>DeShare</strong>," "<strong>we</strong>," "<strong>us</strong>," or "<strong>our</strong>"). These Terms govern your access to and use of the DeShare website, mobile applications, APIs, and all related services (collectively, the "<strong>Services</strong>"). Please read these Terms carefully before using the Services.
+            </p>
+
+            <div class="legal-toc">
+                <h3>TABLE OF CONTENTS</h3>
+                <ol>
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#modifications">Modifications to Terms</a></li>
+                    <li><a href="#services">Description of Services</a></li>
+                    <li><a href="#eligibility">Eligibility &amp; Restricted Jurisdictions</a></li>
+                    <li><a href="#user-conduct">User Conduct</a></li>
+                    <li><a href="#hk-trading">Hong Kong Securities Trading</a></li>
+                    <li><a href="#risk-disclosure">Investment Risk Disclosure</a></li>
+                    <li><a href="#hk-risks">Hong Kong Market Specific Risks</a></li>
+                    <li><a href="#order-execution">Order Execution &amp; Market Data</a></li>
+                    <li><a href="#no-kyc">No-KYC Policy &amp; Associated Risks</a></li>
+                    <li><a href="#aml">Anti-Money Laundering</a></li>
+                    <li><a href="#corporate-actions">Corporate Actions</a></li>
+                    <li><a href="#fees">Fees and Charges</a></li>
+                    <li><a href="#limitation">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#ip">Intellectual Property</a></li>
+                    <li><a href="#third-party">Third-Party Links &amp; Services</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#governing-law">Governing Law &amp; Dispute Resolution</a></li>
+                    <li><a href="#force-majeure">Force Majeure</a></li>
+                    <li><a href="#severability">Severability</a></li>
+                    <li><a href="#entire-agreement">Entire Agreement</a></li>
+                    <li><a href="#contact">Contact Information</a></li>
+                </ol>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="legal-section" id="acceptance">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing, registering for, or using any of the Services, you acknowledge that you have read, understood, and agree to be bound by these Terms, together with our <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a>, which is incorporated herein by reference. If you do not agree to these Terms in their entirety, you must immediately cease all access to and use of the Services.</p>
+                <p>Your continued use of the Services following the posting of any amendments or modifications to these Terms shall constitute your acceptance of such changes. It is your responsibility to review these Terms periodically for updates.</p>
+                <p>If you are accessing or using the Services on behalf of a company, organization, or other legal entity, you represent and warrant that you have the authority to bind such entity to these Terms, in which case the terms "you" and "your" shall refer to such entity.</p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="legal-section" id="modifications">
+                <h2>2. Modifications to Terms</h2>
+                <p>DeShare reserves the right to modify, amend, or update these Terms at any time and at its sole discretion. Any changes will become effective immediately upon posting the revised Terms on the Services. We may, but are not obligated to, provide you with additional notice of material changes through email notification or a prominent notice within the Services.</p>
+                <p>Your continued access to or use of the Services after any such modifications constitutes your binding acceptance of the revised Terms. If you do not agree to any modification, your sole and exclusive remedy is to discontinue use of the Services. It is your responsibility to check these Terms periodically for changes.</p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="legal-section" id="services">
+                <h2>3. Description of Services</h2>
+                <p>DeShare provides users with access to financial information and technology infrastructure that may facilitate securities trading services through third-party licensed brokerage partners. The Services may include, but are not limited to:</p>
+                <ol>
+                    <li>Access to real-time and delayed market data, financial news, and research information;</li>
+                    <li>Securities trading interfaces, order management, and account management tools;</li>
+                    <li>Portfolio monitoring, performance tracking, and analytical tools;</li>
+                    <li>Tokenized representations of securities via blockchain-based infrastructure;</li>
+                    <li>Smart contract-based settlement and custody mechanisms;</li>
+                    <li>Application programming interfaces (APIs) for programmatic access to certain Services.</li>
+                </ol>
+                <p><strong>Important Disclaimer:</strong> Unless explicitly stated otherwise in a separate written agreement, DeShare does not act as a broker-dealer, investment adviser, or financial intermediary. All securities transactions are executed through and by third-party licensed intermediaries and brokerage partners. DeShare serves solely as a technology platform provider.</p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="legal-section" id="eligibility">
+                <h2>4. Eligibility &amp; Restricted Jurisdictions</h2>
+
+                <h3>4.1 Absolute Prohibitions</h3>
+                <p>The Services are strictly prohibited for, and shall not be accessed by, any individual, entity, or agent located in, incorporated in, or a citizen or resident of any of the following restricted jurisdictions:</p>
+                <ul>
+                    <li><strong>United States of America</strong> (including all territories and possessions);</li>
+                    <li><strong>People's Republic of China</strong> (Mainland China);</li>
+                    <li><strong>Hong Kong Special Administrative Region;</strong></li>
+                    <li><strong>Macau Special Administrative Region;</strong></li>
+                    <li><strong>Taiwan;</strong></li>
+                    <li>Any jurisdiction designated as high-risk or non-cooperative by the <strong>Financial Action Task Force (FATF)</strong>;</li>
+                    <li>Any jurisdiction subject to comprehensive sanctions administered by the United Nations, the European Union, or any other applicable sanctions authority.</li>
+                </ul>
+
+                <h3>4.2 User Representations</h3>
+                <p>By accessing or using the Services, you represent and warrant that:</p>
+                <ol>
+                    <li>You are at least 18 years of age or the age of legal majority in your jurisdiction of residence;</li>
+                    <li>You have the legal capacity and authority to enter into binding agreements;</li>
+                    <li>You are not located in, incorporated in, or a citizen or resident of any restricted jurisdiction;</li>
+                    <li>You are not subject to any personal or economic sanctions administered by any governmental authority;</li>
+                    <li>You will comply with all applicable local, national, and international laws, regulations, and ordinances in connection with your use of the Services.</li>
+                </ol>
+
+                <h3>4.3 Right of Termination</h3>
+                <p>DeShare reserves the absolute and unconditional right to immediately suspend, restrict, or permanently terminate access to any User found to be, or reasonably suspected of, accessing the Services from a restricted jurisdiction, without prior notice and without liability.</p>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="legal-section" id="user-conduct">
+                <h2>5. User Conduct</h2>
+                <p>You agree that you will not use the Services to:</p>
+                <ol>
+                    <li>Violate any applicable law, regulation, or ordinance, including but not limited to securities laws, anti-money laundering laws, and sanctions regulations;</li>
+                    <li>Engage in market manipulation, insider trading, wash trading, spoofing, layering, or any other form of fraudulent or deceptive trading activity;</li>
+                    <li>Transmit any malware, viruses, worms, or other malicious code designed to interrupt, destroy, or limit the functionality of the Services;</li>
+                    <li>Attempt to gain unauthorized access to any portion of the Services, other users' accounts, or any systems or networks connected to the Services;</li>
+                    <li>Use the Services for the purpose of money laundering, terrorist financing, or the circumvention of any applicable sanctions;</li>
+                    <li>Reverse engineer, decompile, disassemble, or otherwise attempt to derive the source code of any software underlying the Services;</li>
+                    <li>Use automated scripts, bots, crawlers, or scrapers to access the Services without DeShare's prior written consent;</li>
+                    <li>Impersonate any person or entity, or falsely state or otherwise misrepresent your identity or affiliation;</li>
+                    <li>Interfere with or disrupt the integrity or performance of the Services or the data contained therein.</li>
+                </ol>
+                <p>DeShare reserves the right to investigate and take appropriate legal action against any User who, in DeShare's sole discretion, violates this provision, including but not limited to removing the offending content, suspending or terminating the User's account, and reporting such User to applicable law enforcement authorities.</p>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="legal-section" id="hk-trading">
+                <h2>6. Hong Kong Securities Trading</h2>
+                <p>Certain Services may relate to securities listed on the Hong Kong Stock Exchange ("<strong>HKEX</strong>"). Trading in such securities is subject to, and Users must comply with:</p>
+                <ol>
+                    <li>The rules, regulations, and market practices of Hong Kong Exchanges and Clearing Limited (HKEX);</li>
+                    <li>All applicable regulations, codes, and guidelines issued by the Hong Kong Securities and Futures Commission ("<strong>SFC</strong>"), including but not limited to the Securities and Futures Ordinance (Cap. 571);</li>
+                    <li>All applicable clearing, settlement, and depository requirements as determined by the Hong Kong Securities Clearing Company Limited (HKSCC).</li>
+                </ol>
+                <p><strong>No Execution Guarantee:</strong> DeShare does not guarantee the execution of any order, in whole or in part. Orders may be rejected, delayed, or partially filled due to market conditions, exchange restrictions, regulatory requirements, or other factors beyond DeShare's control.</p>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="legal-section" id="risk-disclosure">
+                <h2>7. Investment Risk Disclosure</h2>
+                <p><strong>Trading in securities involves substantial risk of loss and is not suitable for all investors. You should carefully consider whether trading is appropriate for you in light of your financial condition, investment experience, and risk tolerance. The following risk factors are not exhaustive:</strong></p>
+
+                <h3>7.1 Market Volatility</h3>
+                <p>The value of securities and other financial instruments can fluctuate significantly due to market conditions, economic events, geopolitical developments, and other factors. You may sustain a total loss of the funds you invest, and in certain circumstances, you may incur losses exceeding your initial investment.</p>
+
+                <h3>7.2 No Investment Advice</h3>
+                <p>DeShare does not provide investment advice, financial advice, tax advice, or legal advice. Any information provided through the Services — including market data, research, analysis, and commentary — is for informational purposes only and shall not be construed as a recommendation, solicitation, or offer to buy or sell any security or financial instrument.</p>
+
+                <h3>7.3 Past Performance</h3>
+                <p>Past performance of any security, portfolio, or trading strategy is not indicative of future results. Historical returns, expected returns, and probability projections are provided for informational purposes only and may not reflect actual future performance.</p>
+
+                <h3>7.4 Leveraged and Derivative Products</h3>
+                <p>Certain products accessible through the Services may involve leverage or derivative instruments that carry a heightened risk of loss. Such products may result in losses exceeding your initial investment.</p>
+
+                <h3>7.5 Blockchain and Smart Contract Risks</h3>
+                <p>The use of blockchain technology and smart contracts introduces additional risks, including but not limited to smart contract vulnerabilities, network congestion, gas fee volatility, consensus mechanism failures, and the irreversibility of blockchain transactions.</p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="legal-section" id="hk-risks">
+                <h2>8. Hong Kong Market Specific Risks</h2>
+                <p>Users trading in securities listed on the HKEX should be aware of the following market-specific risks:</p>
+
+                <h3>8.1 No Daily Price Limits</h3>
+                <p>Unlike certain other markets, the Hong Kong securities market does not impose daily price fluctuation limits. There is no ceiling or floor on the extent to which the price of a listed security may move in a single trading session, which may result in extreme price volatility.</p>
+
+                <h3>8.2 T+2 Settlement Cycle</h3>
+                <p>Settlement of Hong Kong securities transactions follows a T+2 settlement cycle (two business days after the trade date). Failure to deliver securities or funds by the settlement deadline may result in forced buy-in or sell-out at the User's expense.</p>
+
+                <h3>8.3 Transaction Levies and Stamp Duty</h3>
+                <p>Trading in Hong Kong securities may be subject to various levies, including but not limited to stamp duty, SFC transaction levy, HKEX trading fee, and other government-imposed charges, which may change from time to time without prior notice.</p>
+
+                <h3>8.4 Severe Weather and Trading Halts</h3>
+                <p>The HKEX may suspend or delay trading sessions due to typhoon signals (Typhoon Signal No. 8 or above), black rainstorm warnings, or other severe weather conditions. Trading halts may also be imposed by the HKEX or SFC for regulatory reasons. Users should be aware that open orders may remain in the market or be cancelled during such events, depending on the applicable exchange rules.</p>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="legal-section" id="order-execution">
+                <h2>9. Order Execution &amp; Market Data</h2>
+
+                <h3>9.1 Order Routing</h3>
+                <p>All orders placed through the Services are routed to and executed by third-party licensed brokers and market participants. DeShare does not execute, settle, or clear any securities transactions. DeShare does not act as a counterparty to any trade.</p>
+
+                <h3>9.2 No Execution Guarantee</h3>
+                <p>DeShare does not guarantee the execution, price, or timing of any order. Market orders may be executed at prices that differ materially from the last quoted price. Limit orders may not be filled, in whole or in part, depending on prevailing market conditions.</p>
+
+                <h3>9.3 Market Data</h3>
+                <p>Market data, quotes, charts, and other financial information provided through the Services may be delayed, inaccurate, or incomplete. Real-time data availability is subject to the terms and conditions of third-party data providers and exchanges. DeShare makes no representation or warranty as to the accuracy, completeness, or timeliness of any market data provided.</p>
+
+                <h3>9.4 System Availability</h3>
+                <p>The Services may be subject to periodic interruptions, downtime, or degradation due to maintenance, upgrades, system failures, network issues, or other technical factors. DeShare does not guarantee uninterrupted or error-free access to the Services and shall not be liable for any losses arising from system unavailability.</p>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="legal-section" id="no-kyc">
+                <h2>10. No-KYC Policy &amp; Associated Risks</h2>
+                <p>DeShare currently operates under a no-KYC (Know Your Customer) policy. Users are not required to submit identity verification documents to access the Services. By using the Services under this policy, you acknowledge and accept the following:</p>
+                <ol>
+                    <li><strong>Anonymity Risks:</strong> The absence of identity verification may attract malicious actors and may increase the risk of fraud, unauthorized transactions, and illicit activity on the platform;</li>
+                    <li><strong>Limited Recourse:</strong> In the event of a dispute, account compromise, or unauthorized access, the lack of identity verification may limit DeShare's ability to investigate, recover assets, or identify responsible parties;</li>
+                    <li><strong>Regulatory Changes:</strong> DeShare may, at any time and without prior notice, implement KYC or identity verification requirements in response to regulatory developments, law enforcement requests, or changes in its compliance policies;</li>
+                    <li><strong>Account Responsibility:</strong> You are solely responsible for maintaining the security and confidentiality of your account credentials, wallet keys, and access mechanisms. DeShare shall not be liable for any loss arising from unauthorized access to your account.</li>
+                </ol>
+            </div>
+
+            <!-- Section 11 -->
+            <div class="legal-section" id="aml">
+                <h2>11. Anti-Money Laundering</h2>
+                <p>DeShare is committed to complying with all applicable anti-money laundering ("<strong>AML</strong>") laws and regulations, including the recommendations of the Financial Action Task Force (FATF). Notwithstanding the no-KYC policy described in Section 10, DeShare reserves the right to:</p>
+                <ol>
+                    <li>Monitor transactions for suspicious activity using automated surveillance systems and manual review processes;</li>
+                    <li>Request additional information or documentation from any User at any time if there is reason to believe that the User's activity may be connected to money laundering, terrorist financing, or other illicit activity;</li>
+                    <li>Suspend, freeze, or terminate any account that is the subject of a suspicious activity investigation, without prior notice and without liability;</li>
+                    <li>Report suspicious transactions to applicable law enforcement authorities and financial intelligence units, as required by law;</li>
+                    <li>Implement enhanced due diligence procedures for users or transactions that present elevated risk profiles.</li>
+                </ol>
+                <p>By using the Services, you represent and warrant that all funds used in connection with the Services are derived from legitimate sources and that you will not use the Services for the purpose of money laundering, terrorist financing, sanctions evasion, or any other unlawful activity.</p>
+            </div>
+
+            <!-- Section 12 -->
+            <div class="legal-section" id="corporate-actions">
+                <h2>12. Corporate Actions</h2>
+                <p>The handling of corporate actions — including but not limited to dividends, stock splits, reverse splits, mergers, acquisitions, rights issues, tender offers, and spin-offs — is dependent upon the policies and procedures of third-party custodians and brokerage partners.</p>
+                <p>DeShare shall make commercially reasonable efforts to process applicable corporate actions in a timely manner; however, DeShare does not guarantee the timing, accuracy, or completeness of any corporate action processing. Users acknowledge that delays or discrepancies may occur and that DeShare shall not be liable for any losses arising from the delayed or inaccurate processing of corporate actions by third-party service providers.</p>
+            </div>
+
+            <!-- Section 13 -->
+            <div class="legal-section" id="fees">
+                <h2>13. Fees and Charges</h2>
+                <p>Users are responsible for all fees, charges, and costs associated with their use of the Services, including but not limited to:</p>
+                <ul>
+                    <li><strong>Brokerage commissions</strong> charged by third-party executing brokers;</li>
+                    <li><strong>Exchange fees</strong> imposed by the relevant securities exchange;</li>
+                    <li><strong>Settlement and clearing fees</strong> charged by clearing houses and custodians;</li>
+                    <li><strong>Regulatory levies</strong> imposed by applicable regulatory authorities (e.g., SFC transaction levy, stamp duty);</li>
+                    <li><strong>Blockchain network fees</strong> (gas fees) associated with on-chain transactions;</li>
+                    <li><strong>Currency conversion fees</strong> that may apply to cross-currency transactions;</li>
+                    <li><strong>Platform fees</strong> as published on the DeShare website from time to time.</li>
+                </ul>
+                <p>DeShare reserves the right to modify its fee schedule at any time. Updated fee schedules will be published on the Services and shall become effective upon posting. Continued use of the Services following any fee change constitutes acceptance of the revised fees.</p>
+            </div>
+
+            <!-- Section 14 -->
+            <div class="legal-section" id="limitation">
+                <h2>14. Limitation of Liability</h2>
+                <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, DESHARE, ITS AFFILIATES, DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, AND LICENSORS SHALL NOT BE LIABLE FOR:</strong></p>
+                <ol>
+                    <li>Any direct, indirect, incidental, special, consequential, exemplary, or punitive damages arising out of or relating to your use of or inability to use the Services;</li>
+                    <li>Any loss of profits, revenue, data, goodwill, or business opportunities;</li>
+                    <li>Any losses resulting from market volatility, price fluctuations, or the decline in value of any security or financial instrument;</li>
+                    <li>Any losses resulting from system interruptions, technical failures, cyberattacks, unauthorized access, or network outages;</li>
+                    <li>Any losses resulting from the acts or omissions of third-party brokers, custodians, clearing houses, exchanges, or data providers;</li>
+                    <li>Any losses resulting from regulatory actions, legal proceedings, or changes in applicable laws or regulations;</li>
+                    <li>Any losses resulting from smart contract errors, blockchain network failures, or the loss of private keys or wallet credentials.</li>
+                </ol>
+                <p>In no event shall DeShare's total aggregate liability to you for all claims arising out of or relating to these Terms or the Services exceed the total amount of fees paid by you to DeShare during the twelve (12) month period immediately preceding the event giving rise to the claim.</p>
+                <p>The limitations of liability set forth in this section shall apply regardless of the form of action, whether in contract, tort (including negligence), strict liability, or otherwise, and even if DeShare has been advised of the possibility of such damages.</p>
+            </div>
+
+            <!-- Section 15 -->
+            <div class="legal-section" id="indemnification">
+                <h2>15. Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless DeShare, its affiliates, subsidiaries, directors, officers, employees, agents, licensors, and service providers from and against any and all claims, demands, losses, liabilities, damages, costs, and expenses (including reasonable attorneys' fees and court costs) arising out of or relating to:</p>
+                <ol>
+                    <li>Your use of or access to the Services;</li>
+                    <li>Your violation of these Terms or any applicable law, regulation, or third-party right;</li>
+                    <li>Any content or data you submit, transmit, or make available through the Services;</li>
+                    <li>Your negligence, willful misconduct, or fraud;</li>
+                    <li>Any dispute between you and any third party arising out of or relating to the Services.</li>
+                </ol>
+                <p>This indemnification obligation shall survive the termination or expiration of these Terms and your use of the Services.</p>
+            </div>
+
+            <!-- Section 16 -->
+            <div class="legal-section" id="ip">
+                <h2>16. Intellectual Property</h2>
+                <p>All content, materials, features, and functionality of the Services — including but not limited to text, graphics, logos, icons, images, audio clips, video clips, data compilations, software, smart contracts, and the design, selection, and arrangement thereof — are the exclusive property of DeShare or its licensors and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                <p>You are granted a limited, non-exclusive, non-transferable, revocable license to access and use the Services for your personal, non-commercial use, subject to these Terms. You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on the Services, except as permitted by these Terms or with DeShare's prior written consent.</p>
+                <p>The DeShare name, logo, and all related names, logos, product and service names, designs, and slogans are trademarks of DeShare or its affiliates. You may not use such marks without the prior written permission of DeShare.</p>
+            </div>
+
+            <!-- Section 17 -->
+            <div class="legal-section" id="third-party">
+                <h2>17. Third-Party Links &amp; Services</h2>
+                <p>The Services may contain links to third-party websites, applications, or services that are not owned or controlled by DeShare. DeShare has no control over, and assumes no responsibility for, the content, privacy policies, practices, or availability of any third-party websites or services.</p>
+                <p>Your use of third-party websites and services is at your own risk and subject to the terms and conditions and privacy policies of those third parties. DeShare does not endorse or assume any liability for any third-party sites, information, materials, products, or services.</p>
+                <p>You acknowledge and agree that DeShare shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any content, goods, or services available on or through any third-party websites or services.</p>
+            </div>
+
+            <!-- Section 18 -->
+            <div class="legal-section" id="termination">
+                <h2>18. Termination</h2>
+                <p>DeShare may, at its sole and absolute discretion, immediately suspend, restrict, or permanently terminate your access to the Services, in whole or in part, at any time and for any reason, including but not limited to:</p>
+                <ol>
+                    <li>Breach or suspected breach of these Terms;</li>
+                    <li>Request by law enforcement or other governmental authority;</li>
+                    <li>Suspected fraudulent, abusive, or illegal activity;</li>
+                    <li>Non-payment of any fees owed to DeShare;</li>
+                    <li>Extended periods of inactivity;</li>
+                    <li>Unexpected technical or security issues;</li>
+                    <li>Discontinuance or material modification of the Services.</li>
+                </ol>
+                <p>Upon termination, your right to use the Services will immediately cease. All provisions of these Terms that by their nature should survive termination shall survive, including but not limited to ownership provisions, warranty disclaimers, indemnification, limitations of liability, and dispute resolution provisions.</p>
+                <p>DeShare shall not be liable to you or any third party for any termination of your access to the Services.</p>
+            </div>
+
+            <!-- Section 19 -->
+            <div class="legal-section" id="governing-law">
+                <h2>19. Governing Law &amp; Dispute Resolution</h2>
+
+                <h3>19.1 Governing Law</h3>
+                <p>These Terms and any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof, shall be governed by and construed in accordance with the laws of the <strong>British Virgin Islands</strong>, without regard to its conflict of law provisions.</p>
+
+                <h3>19.2 Arbitration</h3>
+                <p>Any dispute, controversy, or claim arising out of or relating to these Terms, including the formation, applicability, breach, termination, validity, or enforceability thereof, shall be referred to and finally resolved by arbitration administered by the <strong>Singapore International Arbitration Centre ("SIAC")</strong> in accordance with the SIAC Arbitration Rules in force at the time of filing. The seat of arbitration shall be Singapore. The tribunal shall consist of one (1) arbitrator. The language of the arbitration shall be English.</p>
+
+                <h3>19.3 Class Action Waiver</h3>
+                <p><strong>YOU AND DESHARE AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER ONLY IN YOUR OR ITS INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS, CONSOLIDATED, OR REPRESENTATIVE ACTION.</strong> Unless both you and DeShare agree otherwise in writing, the arbitrator may not consolidate more than one person's claims and may not otherwise preside over any form of a class, consolidated, or representative proceeding.</p>
+
+                <h3>19.4 Waiver of Jury Trial</h3>
+                <p>TO THE EXTENT PERMITTED BY APPLICABLE LAW, YOU AND DESHARE EACH WAIVE THE RIGHT TO A TRIAL BY JURY IN ANY ACTION, PROCEEDING, OR COUNTERCLAIM ARISING OUT OF OR RELATING TO THESE TERMS OR THE SERVICES.</p>
+            </div>
+
+            <!-- Section 20 -->
+            <div class="legal-section" id="force-majeure">
+                <h2>20. Force Majeure</h2>
+                <p>DeShare shall not be liable for any failure or delay in the performance of its obligations under these Terms to the extent such failure or delay results from circumstances beyond DeShare's reasonable control, including but not limited to:</p>
+                <ul>
+                    <li>Acts of God, natural disasters, epidemics, or pandemics;</li>
+                    <li>War, armed conflict, terrorism, riots, or civil unrest;</li>
+                    <li>Government actions, sanctions, embargoes, or regulatory changes;</li>
+                    <li>Strikes, labor disputes, or shortages of labor or materials;</li>
+                    <li>Power outages, internet failures, telecommunications disruptions, or cyberattacks;</li>
+                    <li>Failures of third-party systems, infrastructure, or services, including exchanges, clearing houses, and data providers;</li>
+                    <li>Blockchain network congestion, forks, or protocol-level failures.</li>
+                </ul>
+                <p>The affected party's obligations shall be suspended for the duration of the force majeure event, and the time for performance shall be extended accordingly.</p>
+            </div>
+
+            <!-- Section 21 -->
+            <div class="legal-section" id="severability">
+                <h2>21. Severability</h2>
+                <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction or an arbitral tribunal, such invalidity, illegality, or unenforceability shall not affect any other provision of these Terms. The remaining provisions shall continue in full force and effect, and the invalid or unenforceable provision shall be modified to the minimum extent necessary to make it valid, legal, and enforceable while preserving the original intent of the parties.</p>
+            </div>
+
+            <!-- Section 22 -->
+            <div class="legal-section" id="entire-agreement">
+                <h2>22. Entire Agreement</h2>
+                <p>These Terms, together with the <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a> and any other legal notices, agreements, or policies published by DeShare on the Services, constitute the entire agreement between you and DeShare with respect to the Services and supersede all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, with respect to the Services.</p>
+                <p>No waiver by DeShare of any term or condition set out in these Terms shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition. Any failure of DeShare to assert a right or provision under these Terms shall not constitute a waiver of such right or provision.</p>
+            </div>
+
+            <!-- Contact -->
+            <div class="legal-contact-box" id="contact">
+                <h2>23. Contact Information</h2>
+                <p>If you have any questions, concerns, or requests regarding these Terms of Service, please contact us at:</p>
+                <p>
+                    <strong>DeShare Limited</strong><br>
+                    Email: <a href="mailto:support@deshare.finance">support@deshare.finance</a>
+                </p>
+                <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 0;">
+                    © 2026 DeShare Limited. All rights reserved.
+                </p>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="5-faq.html" class="nav-button">← Prev: 5. Q&A</a>
+                <div></div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

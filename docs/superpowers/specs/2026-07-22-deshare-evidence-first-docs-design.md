@@ -133,7 +133,7 @@ Kimi facts supplied by DeShare:
 | Reference valuation | USD 31.5 billion pre-money |
 | Legal structure | L1 - Hong Kong Limited Partnership Fund (LPF) |
 | Token name | `PreKimiToken` |
-| Maximum issuance | 1,000,000 interests/tokens |
+| Maximum issuance | 10,000 interests/tokens |
 | Unit price | 100 USDT |
 | Subscription and management fee | 8% |
 | Performance carry | 20% |

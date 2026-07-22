@@ -61,12 +61,28 @@ These statements will appear in both the offering table and a dedicated timeline
 - Structure: L1 Hong Kong LPF.
 - Subscription plus management fee: 8%.
 - Performance carry: 20%.
-- Maximum issuance: 1,000,000 interests.
+- Maximum issuance: 10,000 interests.
 - Token name: `PreKimiToken`.
 - Unit price: 100 USDT.
 - Users from the United States and Mainland China may not participate.
 - The underlying fund is confidential at the fund provider's request; details are available through `bd@deshare.finance` after NDA execution.
 - No token contract address is currently published, so the documentation must not imply that the token is deployed.
+
+## Kimi Important Terms and Risk Disclosure
+
+Both Kimi pages will consolidate the existing short liquidity and rights callouts into one prominent `Important Terms & Risk Disclosure` section modeled on the complete SpaceX disclosure structure. The copy must be adapted to Kimi and the Hong Kong LPF offering rather than copied verbatim.
+
+The section will contain seven labeled risks in both languages:
+
+- Nature of rights: `PreKimiToken` is an economic interest through the disclosed structure and is not direct Kimi or Moonshot AI equity, ownership, voting, dividend, or information rights.
+- Non-affiliation: Kimi and Moonshot AI have not endorsed, approved, or authorized this DeShare offering, unless definitive documents later establish otherwise.
+- Jurisdiction restrictions: United States, Mainland China, and other restricted-jurisdiction users may not participate.
+- Investment risk: investors can lose some or all principal; Kimi K3 product capabilities do not establish investment return or company value.
+- Liquidity risk: internal platform trading may have limited liquidity and does not guarantee a buyer, seller, requested price, execution time, or completed trade.
+- Fund and due-diligence risk: the underlying offshore USD fund is confidential and must be evaluated through NDA-gated materials before participation.
+- Lock-up and unlock risk: if Kimi lists, the expected 6–12 month post-listing lock-up and actual unlock arrangements depend on the listing structure, official post-listing announcement, and final documents.
+
+The section must not contain stale references to `PreSPX`, SpaceX, DigiFT, or a fixed six-month lock-up. It will retain the current explicit statements that no token contract address is published, no IPO or exact unlock date is promised, and internal trading is not guaranteed liquidity.
 
 ## Verification
 

@@ -84,6 +84,21 @@ The section will contain seven labeled risks in both languages:
 
 The section must not contain stale references to `PreSPX`, SpaceX, DigiFT, or a fixed six-month lock-up. It will retain the current explicit statements that no token contract address is published, no IPO or exact unlock date is promised, and internal trading is not guaranteed liquidity.
 
+## Overall Subscription Failure and Full Refund
+
+Both Kimi pages will add a dedicated section immediately after the participation timeline. It applies to failure of the offering as a whole and must not be described as a discretionary individual cancellation right.
+
+The offering is treated as an overall subscription failure if either condition occurs:
+
+1. Aggregate subscription proceeds do not reach the fund's USD 500,000 minimum subscription threshold.
+2. During execution, the fund fails to complete its subscription for or acquisition of the target underlying interest.
+
+If either condition occurs, DeShare will refund each participant's full subscription principal and the entire 8% subscription and management fee already charged. No platform fee, management fee, or other offering fee will be deducted from that refund.
+
+The documentation will not promise a specific refund arrival time or blockchain confirmation time. Refund method and execution timing remain subject to the final offering documents and refund announcement.
+
+The English page will use `Overall Subscription Failure and Full Refund`; the Chinese page will use `整体认购失败与全额退款`. Both pages will display the two triggers and refund outcome as a clearly separated operational section, distinct from the general investment-risk disclosure.
+
 ## Verification
 
 Automated tests will fail before implementation and then verify:

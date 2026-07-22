@@ -376,6 +376,13 @@ PAGES["6-3-pre-kimi-en.html"] = ("Pre Kimi", "kimi-en", "en", campaign_head(
 <tr><th>Restricted users</th><td>United States and Mainland China users</td></tr></tbody></table></div>
 <h2>Confidential fund due diligence</h2><p>The offshore USD fund is not publicly identified at the fund manager's request. Eligible counterparties may contact <a href="mailto:bd@deshare.finance">bd@deshare.finance</a> for materials after signing an NDA and completing approval.</p>
 <h2>Participation timeline</h2><div class="sequence"><div class="sequence-step"><h3>Eligibility and documents</h3><p>Confirm jurisdiction and review final documents.</p></div><div class="sequence-step"><h3>Subscription · 2026-07-23–2026-07-28</h3><p>Commit USDT under final rules; fee timing and base are controlled by definitive documents.</p></div><div class="sequence-step"><h3>Allocation and internal market</h3><p>After subscription is completed, DeShare plans to open internal platform trading. Allocation, refund and transfer remain subject to final documents.</p></div><div class="sequence-step"><h3>Listing and lock-up</h3><p>If Kimi completes a public listing, the interest is expected to remain locked for 6–12 months after the listing date.</p></div></div>
+<h2>Overall Subscription Failure and Full Refund</h2>
+<div class="grid">
+<article class="card"><h3>1. Below the fund threshold</h3><p>If aggregate confirmed subscriptions do not reach the fund's USD 500,000 minimum subscription threshold, the offering fails as a whole.</p></article>
+<article class="card"><h3>2. Target acquisition not completed</h3><p>If the fund cannot complete its subscription for or acquisition of the target underlying interest during execution, the offering fails as a whole.</p></article>
+</div>
+<div class="callout verified-callout"><strong>Full refund.</strong> If either condition occurs, DeShare will refund 100% of each participant's subscription principal and the entire 8% subscription and management fee already charged. No platform fee, management fee or other offering fee will be deducted.</div>
+<div class="callout risk"><strong>Scope and timing.</strong> This policy applies only to failure of the offering as a whole and does not create an individual cancellation right. Refund method and timing are governed by the final offering documents and refund announcement; no specific arrival or blockchain confirmation time is promised.</div>
 <h2>Internal trading, liquidity and unlock</h2>
 <p>Internal-market liquidity is normally limited. An internal listing or order is not guaranteed to find a buyer or seller, execute at a requested price, execute within a particular time, or complete at all.</p>
 <p>The actual lock-up period and unlock arrangements depend on the legal and transaction structure used when Kimi lists. The post-listing official announcement and final transaction documents control. No exact unlock date, IPO date, external-market liquidity or completed sale is promised.</p>
@@ -410,6 +417,13 @@ PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
 <tr><th>受限用户</th><td>美国用户及中国大陆用户</td></tr></tbody></table></div>
 <h2>保密基金尽调</h2><p>因基金方要求，具体境外美元基金名称及详细资料不对外公开。符合条件的合作方可联系 <a href="mailto:bd@deshare.finance">bd@deshare.finance</a>，在签署 NDA 并通过审核后获取资料。</p>
 <h2>参与时间线</h2><div class="sequence"><div class="sequence-step"><h3>资格与文件</h3><p>确认司法辖区资格并阅读最终发行文件。</p></div><div class="sequence-step"><h3>认购 · 2026-07-23–2026-07-28</h3><p>按最终规则提交 USDT；费用时点及计算基数以正式文件为准。</p></div><div class="sequence-step"><h3>分配与平台内交易</h3><p>认购完成后，DeShare 计划开放平台内交易（内盘）；分配、退款及转让仍以最终文件为准。</p></div><div class="sequence-step"><h3>上市与锁定期</h3><p>若 Kimi 完成上市，相关份额预计自上市日起锁定 6–12 个月。</p></div></div>
+<h2>整体认购失败与全额退款</h2>
+<div class="grid">
+<article class="card"><h3>1. 未达到基金认购门槛</h3><p>若经确认的总认购金额未达到基金要求的 500,000 美元最低认购门槛，本次发行视为整体认购失败。</p></article>
+<article class="card"><h3>2. 目标标的认购未完成</h3><p>若基金在执行过程中未能完成目标标的权益认购或收购，本次发行视为整体认购失败。</p></article>
+</div>
+<div class="callout verified-callout"><strong>全额退款。</strong>出现任一情况，DeShare 将向每位参与者退还 100% 认购本金以及已收取的完整 8% 手续费及管理费，不扣除任何平台费、管理费或其他发行费用。</div>
+<div class="callout risk"><strong>适用范围及时间。</strong>该政策仅适用于本次发行整体认购失败，不构成参与者任意取消认购的权利。退款方式及执行时间以最终发行文件和退款公告为准，不承诺具体到账时间或链上交易确认时间。</div>
 <h2>内盘流动性与解锁安排</h2>
 <p>内盘通常流动性较低。即使开放平台内交易或提交订单，也不能确保找到买方或卖方，不能确保按指定价格或时间成交，也不能确保交易最终完成。</p>
 <p>实际锁定期和解锁安排取决于 Kimi 上市时采用的法律及交易架构，以上市后官方公布及最终交易文件为准。本发行不承诺确切解锁日期、上市日期、外部市场流动性或一定能够完成出售。</p>

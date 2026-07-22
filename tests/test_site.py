@@ -287,6 +287,28 @@ class SiteTests(unittest.TestCase):
             self.assertIn("NDA", text)
             self.assertNotRegex(text, r"0x[a-fA-F0-9]{40}")
 
+    def test_kimi_overall_subscription_failure_refund(self):
+        english = (ROOT / "6-3-pre-kimi-en.html").read_text(encoding="utf-8")
+        chinese = (ROOT / "6-3-pre-kimi-zh.html").read_text(encoding="utf-8")
+        for value in (
+            "Overall Subscription Failure and Full Refund",
+            "USD 500,000",
+            "Target acquisition not completed",
+            "100% of each participant's subscription principal",
+            "entire 8% subscription and management fee",
+            "does not create an individual cancellation right",
+        ):
+            self.assertIn(value, english)
+        for value in (
+            "整体认购失败与全额退款",
+            "500,000 美元",
+            "目标标的认购未完成",
+            "100% 认购本金",
+            "完整 8% 手续费及管理费",
+            "不构成参与者任意取消认购的权利",
+        ):
+            self.assertIn(value, chinese)
+
     def test_no_empty_placeholder_file(self):
         self.assertFalse((ROOT / "deshare").exists())
 

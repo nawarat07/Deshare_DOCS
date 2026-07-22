@@ -205,6 +205,38 @@ class SiteTests(unittest.TestCase):
             for section in sections:
                 self.assertIn(section, text, f"{name}: {section}")
 
+    def test_kimi_k3_and_subscription_timeline(self):
+        english = (ROOT / "6-3-pre-kimi-en.html").read_text(encoding="utf-8")
+        chinese = (ROOT / "6-3-pre-kimi-zh.html").read_text(encoding="utf-8")
+        for value in (
+            "Kimi K3",
+            "2026-07-16",
+            "2.8 trillion",
+            "1-million-token",
+            "https://www.kimi.com/help/agent/agent-overview",
+        ):
+            self.assertIn(value, english)
+        for value in (
+            "Kimi K3",
+            "2026-07-16",
+            "2.8 万亿",
+            "100 万 Token",
+            "https://www.kimi.com/help/agent/agent-overview",
+        ):
+            self.assertIn(value, chinese)
+        for text in (english, chinese):
+            self.assertIn("2026-07-23", text)
+            self.assertIn("2026-07-28", text)
+            self.assertIn("6–12", text)
+
+    def test_kimi_internal_market_does_not_promise_liquidity(self):
+        english = (ROOT / "6-3-pre-kimi-en.html").read_text(encoding="utf-8").lower()
+        chinese = (ROOT / "6-3-pre-kimi-zh.html").read_text(encoding="utf-8")
+        self.assertIn("internal platform trading", english)
+        self.assertIn("not guaranteed", english)
+        self.assertIn("平台内交易", chinese)
+        self.assertIn("不能确保", chinese)
+
     def test_kimi_terms_match(self):
         for name in ("6-3-pre-kimi-zh.html", "6-3-pre-kimi-en.html"):
             path = ROOT / name

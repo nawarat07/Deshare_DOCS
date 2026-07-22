@@ -362,14 +362,24 @@ PAGES["6-3-pre-kimi-en.html"] = ("Pre Kimi", "kimi-en", "en", campaign_head(
     '<span class="metric">PreKimiToken</span><span class="metric-label">Token name · not yet deployed</span><p>1,000,000 maximum interests<br>100 USDT per interest<br>8% subscription + management fee<br>20% performance carry</p>'
 ) + f'''
 <div class="language-switch"><a href="6-3-pre-kimi-zh.html">中文</a><a href="6-3-pre-kimi-en.html">English</a></div>
+<div class="callout">{badge("verified", "Official Kimi product information")}<p>Kimi is an AI assistant developed by Moonshot AI. According to <a href="https://www.kimi.com/help/agent/agent-overview" target="_blank" rel="noopener noreferrer">Kimi's official product history</a>, Kimi K3 was released on 2026-07-16 and is described by Kimi as its most capable model at publication.</p></div>
+<h2>Moonshot AI and Kimi K3</h2>
+<p>Kimi K3 is a 2.8 trillion-parameter model built with Kimi Delta Attention (KDA) and Attention Residuals. Official Kimi materials describe native vision, a 1-million-token context window, and use across chat, agent tasks, long-horizon coding, knowledge work and reasoning. Readers can also review the <a href="https://www.kimi.com/help/getting-started/agentic-chat" target="_blank" rel="noopener noreferrer">official Kimi K3 model overview</a>.</p>
+<div class="grid three"><article class="card"><h3>2026-07-16</h3><p>Official Kimi K3 release date.</p></article><article class="card"><h3>2.8 trillion</h3><p>Parameters disclosed by Kimi.</p></article><article class="card"><h3>Native multimodal + long context</h3><p>Native vision and a context window of up to one million tokens.</p></article></div>
+<div class="callout risk"><strong>Evidence boundary.</strong> Model specifications and product capabilities are official Kimi product information. They do not establish the fund valuation, future company value, investment return, IPO timing or liquidity of PreKimiToken.</div>
 <div class="callout">{badge("disclosed", "Operator disclosed")}<p>Legal structure: L1 – Hong Kong Limited Partnership Fund (LPF). LPF formation is not regulatory approval, allocation guarantee or return guarantee.</p></div>
 <h2>Offering parameters</h2><div class="table-wrap"><table><tbody>
 <tr><th>Reference valuation</th><td>USD 31.5 billion pre-money</td></tr><tr><th>Legal structure</th><td>L1 – Hong Kong LPF</td></tr>
 <tr><th>Maximum issuance</th><td>1,000,000 interests / PreKimiToken</td></tr><tr><th>Unit price</th><td>100 USDT</td></tr>
 <tr><th>Subscription + management fee</th><td>8%</td></tr><tr><th>Performance carry</th><td>20%</td></tr>
+<tr><th>Subscription window</th><td>2026-07-23 through 2026-07-28</td></tr>
 <tr><th>Restricted users</th><td>United States and Mainland China users</td></tr></tbody></table></div>
 <h2>Confidential fund due diligence</h2><p>The offshore USD fund is not publicly identified at the fund manager's request. Eligible counterparties may contact <a href="mailto:bd@deshare.finance">bd@deshare.finance</a> for materials after signing an NDA and completing approval.</p>
-<h2>Participation</h2><div class="sequence"><div class="sequence-step"><h3>Eligibility and documents</h3><p>Confirm jurisdiction and review final documents.</p></div><div class="sequence-step"><h3>Subscription</h3><p>Commit USDT under final rules; fee timing and base are controlled by definitive documents.</p></div><div class="sequence-step"><h3>Allocation and settlement</h3><p>Allocation, refund, transfer, lock-up, liquidity and settlement remain subject to final documents.</p></div></div>
+<h2>Participation timeline</h2><div class="sequence"><div class="sequence-step"><h3>Eligibility and documents</h3><p>Confirm jurisdiction and review final documents.</p></div><div class="sequence-step"><h3>Subscription · 2026-07-23–2026-07-28</h3><p>Commit USDT under final rules; fee timing and base are controlled by definitive documents.</p></div><div class="sequence-step"><h3>Allocation and internal market</h3><p>After subscription is completed, DeShare plans to open internal platform trading. Allocation, refund and transfer remain subject to final documents.</p></div><div class="sequence-step"><h3>Listing and lock-up</h3><p>If Kimi completes a public listing, the interest is expected to remain locked for 6–12 months after the listing date.</p></div></div>
+<h2>Internal trading, liquidity and unlock</h2>
+<p>Internal-market liquidity is normally limited. An internal listing or order is not guaranteed to find a buyer or seller, execute at a requested price, execute within a particular time, or complete at all.</p>
+<p>The actual lock-up period and unlock arrangements depend on the legal and transaction structure used when Kimi lists. The post-listing official announcement and final transaction documents control. No exact unlock date, IPO date, external-market liquidity or completed sale is promised.</p>
+<div class="callout risk"><strong>Liquidity warning.</strong> Opening internal platform trading does not guarantee liquidity or execution. Investors should be prepared to hold the interest for an extended or indefinite period.</div>
 <div class="callout risk"><strong>Rights and risk.</strong> PreKimiToken has no published contract address and is not presented as deployed. Unless final documents say otherwise, it grants no direct target-company shares, voting, information or dividend rights. Valuation may change and investors may lose part or all capital.</div>
 ''' + nav("6-2-pre-anthropic-en.html", "Pre Anthropic", "terms.html", "Terms of Service"))
 
@@ -379,14 +389,24 @@ PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
     '<span class="metric">PreKimiToken</span><span class="metric-label">Token 名称 · 尚未公布部署</span><p>最大发行 1,000,000 份<br>每份 100 USDT<br>手续费及管理费 8%<br>收益分成 20%</p>'
 ) + f'''
 <div class="language-switch"><a href="6-3-pre-kimi-zh.html">中文</a><a href="6-3-pre-kimi-en.html">English</a></div>
+<div class="callout">{badge("verified", "Kimi 官方产品信息")}<p>Kimi 是月之暗面（Moonshot AI）开发的 AI 助手。根据 <a href="https://www.kimi.com/help/agent/agent-overview" target="_blank" rel="noopener noreferrer">Kimi 官方产品发展记录</a>，Kimi K3 于 2026-07-16 发布，Kimi 将其描述为发布时能力最强的模型。</p></div>
+<h2>月之暗面与 Kimi K3</h2>
+<p>Kimi K3 拥有 2.8 万亿参数，采用 Kimi Delta Attention（KDA）与 Attention Residuals。Kimi 官方资料披露其支持原生视觉和最高 100 万 Token 上下文，面向对话、Agent 任务、长周期编程、知识工作与推理。读者还可查看 <a href="https://www.kimi.com/help/getting-started/agentic-chat" target="_blank" rel="noopener noreferrer">Kimi K3 官方模型介绍</a>。</p>
+<div class="grid three"><article class="card"><h3>2026-07-16</h3><p>Kimi K3 官方发布日期。</p></article><article class="card"><h3>2.8 万亿参数</h3><p>Kimi 官方披露的模型规模。</p></article><article class="card"><h3>原生多模态与长上下文</h3><p>原生视觉和最高 100 万 Token 上下文。</p></article></div>
+<div class="callout risk"><strong>证据边界。</strong> 模型规格及产品能力来自 Kimi 官方产品资料，不构成对基金估值、公司未来价值、投资收益、上市时间或 PreKimiToken 流动性的证明。</div>
 <div class="callout">{badge("disclosed", "运营方披露")}<p>法律结构为 L1 – 香港有限合伙基金（LPF）。采用 LPF 结构不代表监管批准、获配保证或收益保证。</p></div>
 <h2>发行参数</h2><div class="table-wrap"><table><tbody>
 <tr><th>投前参考估值</th><td>315 亿美元（USD 31.5 billion）</td></tr><tr><th>法律结构</th><td>L1 – 香港 LPF</td></tr>
 <tr><th>最大发行</th><td>1,000,000 份 / PreKimiToken</td></tr><tr><th>每份定价</th><td>100 USDT</td></tr>
 <tr><th>手续费及管理费</th><td>8%</td></tr><tr><th>收益分成</th><td>20%</td></tr>
+<tr><th>认购时间</th><td>2026-07-23 至 2026-07-28</td></tr>
 <tr><th>受限用户</th><td>美国用户及中国大陆用户</td></tr></tbody></table></div>
 <h2>保密基金尽调</h2><p>因基金方要求，具体境外美元基金名称及详细资料不对外公开。符合条件的合作方可联系 <a href="mailto:bd@deshare.finance">bd@deshare.finance</a>，在签署 NDA 并通过审核后获取资料。</p>
-<h2>参与流程</h2><div class="sequence"><div class="sequence-step"><h3>资格与文件</h3><p>确认司法辖区资格并阅读最终发行文件。</p></div><div class="sequence-step"><h3>提交认购</h3><p>按最终规则提交 USDT；费用时点及计算基数以正式文件为准。</p></div><div class="sequence-step"><h3>分配与交割</h3><p>分配、退款、转让、锁定期、流动性及交割均以最终文件为准。</p></div></div>
+<h2>参与时间线</h2><div class="sequence"><div class="sequence-step"><h3>资格与文件</h3><p>确认司法辖区资格并阅读最终发行文件。</p></div><div class="sequence-step"><h3>认购 · 2026-07-23–2026-07-28</h3><p>按最终规则提交 USDT；费用时点及计算基数以正式文件为准。</p></div><div class="sequence-step"><h3>分配与平台内交易</h3><p>认购完成后，DeShare 计划开放平台内交易（内盘）；分配、退款及转让仍以最终文件为准。</p></div><div class="sequence-step"><h3>上市与锁定期</h3><p>若 Kimi 完成上市，相关份额预计自上市日起锁定 6–12 个月。</p></div></div>
+<h2>内盘流动性与解锁安排</h2>
+<p>内盘通常流动性较低。即使开放平台内交易或提交订单，也不能确保找到买方或卖方，不能确保按指定价格或时间成交，也不能确保交易最终完成。</p>
+<p>实际锁定期和解锁安排取决于 Kimi 上市时采用的法律及交易架构，以上市后官方公布及最终交易文件为准。本发行不承诺确切解锁日期、上市日期、外部市场流动性或一定能够完成出售。</p>
+<div class="callout risk"><strong>流动性提示。</strong> 开放平台内交易不代表流动性或成交保证，投资者应当做好长期或无法确定期限持有相关份额的准备。</div>
 <div class="callout risk"><strong>权利与风险。</strong> PreKimiToken 尚未公布合约地址，本页不将其描述为已部署。除非正式文件另有约定，其不代表目标公司的直接股份、投票权、信息权或分红权。估值可能变化，投资者可能损失部分或全部本金。</div>
 ''' + nav("6-2-pre-anthropic-zh.html", "Pre Anthropic", "terms.html", "服务条款"))
 

@@ -237,13 +237,46 @@ class SiteTests(unittest.TestCase):
         self.assertIn("平台内交易", chinese)
         self.assertIn("不能确保", chinese)
 
+    def test_kimi_complete_risk_disclosure(self):
+        english = (ROOT / "6-3-pre-kimi-en.html").read_text(encoding="utf-8")
+        chinese = (ROOT / "6-3-pre-kimi-zh.html").read_text(encoding="utf-8")
+        site_style = (ROOT / "style.css").read_text(encoding="utf-8")
+        self.assertIn(".disclaimer-box", site_style)
+        for value in (
+            "Important Terms &amp; Risk Disclosure",
+            "Nature of Rights",
+            "Non-Affiliation Disclaimer",
+            "Jurisdictional Restrictions",
+            "Investment Risk",
+            "Liquidity Risk",
+            "Fund and Due-Diligence Risk",
+            "Lock-Up and Unlock Risk",
+        ):
+            self.assertIn(value, english)
+        for value in (
+            "重要条款与风险提示",
+            "权益性质",
+            "非关联声明",
+            "司法管辖限制",
+            "投资风险",
+            "流动性风险",
+            "基金与尽调风险",
+            "锁定与解锁风险",
+        ):
+            self.assertIn(value, chinese)
+        for text in (english, chinese):
+            self.assertIn('class="disclaimer-box"', text)
+            for stale in ("PreSPX", "DigiFT"):
+                self.assertNotIn(stale, text)
+
     def test_kimi_terms_match(self):
         for name in ("6-3-pre-kimi-zh.html", "6-3-pre-kimi-en.html"):
             path = ROOT / name
             self.assertTrue(path.exists(), name)
             text = path.read_text(encoding="utf-8")
-            for value in ("31.5", "1,000,000", "100 USDT", "8%", "20%", "PreKimiToken"):
+            for value in ("31.5", "10,000", "100 USDT", "8%", "20%", "PreKimiToken"):
                 self.assertIn(value, text, f"{name}: {value}")
+            self.assertNotIn("1,000,000", text, f"{name}: stale issuance amount")
 
     def test_kimi_disclosures(self):
         for name in ("6-3-pre-kimi-zh.html", "6-3-pre-kimi-en.html"):

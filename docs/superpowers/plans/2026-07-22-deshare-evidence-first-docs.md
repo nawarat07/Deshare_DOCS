@@ -64,7 +64,7 @@ class SiteTests(unittest.TestCase):
     def test_kimi_terms_match(self):
         for name in ("6-3-pre-kimi-zh.html", "6-3-pre-kimi-en.html"):
             text = (ROOT / name).read_text()
-            for value in ("31.5", "1,000,000", "100 USDT", "8%", "20%", "PreKimiToken"):
+            for value in ("31.5", "10,000", "100 USDT", "8%", "20%", "PreKimiToken"):
                 self.assertIn(value, text)
 ```
 
@@ -333,7 +333,7 @@ Expected: FAIL because the Kimi pages do not exist.
 
 - [ ] **Step 3: Implement Chinese Kimi page**
 
-Include the 31.5 billion USD pre-money reference valuation, L1 Hong Kong LPF structure, 1,000,000 maximum interests, 100 USDT unit price, 8% subscription/management fee, 20% carry, US/Mainland China restriction, NDA process, non-deployment state, rights limitations, settlement uncertainty, liquidity risk, and final-document precedence.
+Include the 31.5 billion USD pre-money reference valuation, L1 Hong Kong LPF structure, 10,000 maximum interests, 100 USDT unit price, 8% subscription/management fee, 20% carry, US/Mainland China restriction, NDA process, non-deployment state, rights limitations, settlement uncertainty, liquidity risk, and final-document precedence.
 
 - [ ] **Step 4: Implement equivalent English Kimi page**
 

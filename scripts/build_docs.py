@@ -359,7 +359,7 @@ PAGES["6-2-pre-anthropic-zh.html"] = ("Pre Anthropic", "anthropic-zh", "zh-CN", 
 PAGES["6-3-pre-kimi-en.html"] = ("Pre Kimi", "kimi-en", "en", campaign_head(
     "Offering / Operator disclosed", "Kimi · offshore USD fund new-share interest",
     "A structured economic interest through an L1 Hong Kong LPF at a USD 31.5 billion pre-money reference valuation.",
-    '<span class="metric">PreKimiToken</span><span class="metric-label">Token name · not yet deployed</span><p>1,000,000 maximum interests<br>100 USDT per interest<br>8% subscription + management fee<br>20% performance carry</p>'
+    '<span class="metric">PreKimiToken</span><span class="metric-label">Token name · not yet deployed</span><p>10,000 maximum interests<br>100 USDT per interest<br>8% subscription + management fee<br>20% performance carry</p>'
 ) + f'''
 <div class="language-switch"><a href="6-3-pre-kimi-zh.html">中文</a><a href="6-3-pre-kimi-en.html">English</a></div>
 <div class="callout">{badge("verified", "Official Kimi product information")}<p>Kimi is an AI assistant developed by Moonshot AI. According to <a href="https://www.kimi.com/help/agent/agent-overview" target="_blank" rel="noopener noreferrer">Kimi's official product history</a>, Kimi K3 was released on 2026-07-16 and is described by Kimi as its most capable model at publication.</p></div>
@@ -370,7 +370,7 @@ PAGES["6-3-pre-kimi-en.html"] = ("Pre Kimi", "kimi-en", "en", campaign_head(
 <div class="callout">{badge("disclosed", "Operator disclosed")}<p>Legal structure: L1 – Hong Kong Limited Partnership Fund (LPF). LPF formation is not regulatory approval, allocation guarantee or return guarantee.</p></div>
 <h2>Offering parameters</h2><div class="table-wrap"><table><tbody>
 <tr><th>Reference valuation</th><td>USD 31.5 billion pre-money</td></tr><tr><th>Legal structure</th><td>L1 – Hong Kong LPF</td></tr>
-<tr><th>Maximum issuance</th><td>1,000,000 interests / PreKimiToken</td></tr><tr><th>Unit price</th><td>100 USDT</td></tr>
+<tr><th>Maximum issuance</th><td>10,000 interests / PreKimiToken</td></tr><tr><th>Unit price</th><td>100 USDT</td></tr>
 <tr><th>Subscription + management fee</th><td>8%</td></tr><tr><th>Performance carry</th><td>20%</td></tr>
 <tr><th>Subscription window</th><td>2026-07-23 through 2026-07-28</td></tr>
 <tr><th>Restricted users</th><td>United States and Mainland China users</td></tr></tbody></table></div>
@@ -379,14 +379,21 @@ PAGES["6-3-pre-kimi-en.html"] = ("Pre Kimi", "kimi-en", "en", campaign_head(
 <h2>Internal trading, liquidity and unlock</h2>
 <p>Internal-market liquidity is normally limited. An internal listing or order is not guaranteed to find a buyer or seller, execute at a requested price, execute within a particular time, or complete at all.</p>
 <p>The actual lock-up period and unlock arrangements depend on the legal and transaction structure used when Kimi lists. The post-listing official announcement and final transaction documents control. No exact unlock date, IPO date, external-market liquidity or completed sale is promised.</p>
-<div class="callout risk"><strong>Liquidity warning.</strong> Opening internal platform trading does not guarantee liquidity or execution. Investors should be prepared to hold the interest for an extended or indefinite period.</div>
-<div class="callout risk"><strong>Rights and risk.</strong> PreKimiToken has no published contract address and is not presented as deployed. Unless final documents say otherwise, it grants no direct target-company shares, voting, information or dividend rights. Valuation may change and investors may lose part or all capital.</div>
+<div class="disclaimer-box"><h2>⚠️ Important Terms &amp; Risk Disclosure</h2><ul>
+<li><strong>Nature of Rights:</strong> PreKimiToken represents an economic interest through the disclosed Hong Kong LPF structure. It has no published token contract address and is not presented as deployed. Holders receive no direct Kimi or Moonshot AI equity, ownership, voting, dividend, information or other shareholder rights unless definitive documents expressly provide otherwise.</li>
+<li><strong>Non-Affiliation Disclaimer:</strong> Kimi and Moonshot AI have not endorsed, approved or authorized this DeShare offering. The offering is not issued by, sponsored by or affiliated with Kimi or Moonshot AI unless definitive documents later establish otherwise.</li>
+<li><strong>Jurisdictional Restrictions:</strong> This offering is not available to users in the United States, Mainland China or any other restricted jurisdiction. Each participant is responsible for confirming eligibility under applicable law and final subscription documents.</li>
+<li><strong>Investment Risk:</strong> Investors may lose some or all principal. The reference valuation may change, an IPO may not occur, and Kimi K3 product capabilities do not establish Moonshot AI's future value, investment return or offering performance.</li>
+<li><strong>Liquidity Risk:</strong> DeShare plans to open internal platform trading after subscription, but internal-market liquidity may be limited. No buyer, seller, requested price, execution time or completed trade is guaranteed, and investors may need to hold the interest for an extended or indefinite period.</li>
+<li><strong>Fund and Due-Diligence Risk:</strong> The underlying offshore USD fund is confidential at the fund manager's request. Participants should review the NDA-gated fund, legal, custody and transaction materials before investing; the public page alone is not sufficient due diligence.</li>
+<li><strong>Lock-Up and Unlock Risk:</strong> If Kimi completes a public listing, the interest is expected to remain locked for 6–12 months after listing. The actual period and unlock arrangements depend on the listing structure, official post-listing announcement and final documents. No IPO date or exact unlock date is promised.</li>
+</ul></div>
 ''' + nav("6-2-pre-anthropic-en.html", "Pre Anthropic", "terms.html", "Terms of Service"))
 
 PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
     "发行计划 / 运营方披露", "Kimi · 境外美元基金新股份额",
     "通过 L1 香港有限合伙基金（LPF）取得结构化经济权益，投前参考估值为 315 亿美元。",
-    '<span class="metric">PreKimiToken</span><span class="metric-label">Token 名称 · 尚未公布部署</span><p>最大发行 1,000,000 份<br>每份 100 USDT<br>手续费及管理费 8%<br>收益分成 20%</p>'
+    '<span class="metric">PreKimiToken</span><span class="metric-label">Token 名称 · 尚未公布部署</span><p>最大发行 10,000 份<br>每份 100 USDT<br>手续费及管理费 8%<br>收益分成 20%</p>'
 ) + f'''
 <div class="language-switch"><a href="6-3-pre-kimi-zh.html">中文</a><a href="6-3-pre-kimi-en.html">English</a></div>
 <div class="callout">{badge("verified", "Kimi 官方产品信息")}<p>Kimi 是月之暗面（Moonshot AI）开发的 AI 助手。根据 <a href="https://www.kimi.com/help/agent/agent-overview" target="_blank" rel="noopener noreferrer">Kimi 官方产品发展记录</a>，Kimi K3 于 2026-07-16 发布，Kimi 将其描述为发布时能力最强的模型。</p></div>
@@ -397,7 +404,7 @@ PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
 <div class="callout">{badge("disclosed", "运营方披露")}<p>法律结构为 L1 – 香港有限合伙基金（LPF）。采用 LPF 结构不代表监管批准、获配保证或收益保证。</p></div>
 <h2>发行参数</h2><div class="table-wrap"><table><tbody>
 <tr><th>投前参考估值</th><td>315 亿美元（USD 31.5 billion）</td></tr><tr><th>法律结构</th><td>L1 – 香港 LPF</td></tr>
-<tr><th>最大发行</th><td>1,000,000 份 / PreKimiToken</td></tr><tr><th>每份定价</th><td>100 USDT</td></tr>
+<tr><th>最大发行</th><td>10,000 份 / PreKimiToken</td></tr><tr><th>每份定价</th><td>100 USDT</td></tr>
 <tr><th>手续费及管理费</th><td>8%</td></tr><tr><th>收益分成</th><td>20%</td></tr>
 <tr><th>认购时间</th><td>2026-07-23 至 2026-07-28</td></tr>
 <tr><th>受限用户</th><td>美国用户及中国大陆用户</td></tr></tbody></table></div>
@@ -406,8 +413,15 @@ PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
 <h2>内盘流动性与解锁安排</h2>
 <p>内盘通常流动性较低。即使开放平台内交易或提交订单，也不能确保找到买方或卖方，不能确保按指定价格或时间成交，也不能确保交易最终完成。</p>
 <p>实际锁定期和解锁安排取决于 Kimi 上市时采用的法律及交易架构，以上市后官方公布及最终交易文件为准。本发行不承诺确切解锁日期、上市日期、外部市场流动性或一定能够完成出售。</p>
-<div class="callout risk"><strong>流动性提示。</strong> 开放平台内交易不代表流动性或成交保证，投资者应当做好长期或无法确定期限持有相关份额的准备。</div>
-<div class="callout risk"><strong>权利与风险。</strong> PreKimiToken 尚未公布合约地址，本页不将其描述为已部署。除非正式文件另有约定，其不代表目标公司的直接股份、投票权、信息权或分红权。估值可能变化，投资者可能损失部分或全部本金。</div>
+<div class="disclaimer-box"><h2>⚠️ 重要条款与风险提示</h2><ul>
+<li><strong>权益性质：</strong>PreKimiToken 代表通过已披露香港 LPF 结构取得的经济权益。目前尚未公布 Token 合约地址，本页不将其描述为已部署。除非正式文件明确约定，持有人不享有 Kimi 或月之暗面的直接股权、所有权、投票权、分红权、信息权或其他股东权利。</li>
+<li><strong>非关联声明：</strong>Kimi 及月之暗面未对本次 DeShare 发行作出背书、批准或授权。除非后续正式文件另有明确说明，本发行并非由 Kimi 或月之暗面发行、赞助，亦不与其构成关联。</li>
+<li><strong>司法管辖限制：</strong>本发行不面向美国、中国大陆及其他受限司法管辖区用户。参与者有责任根据适用法律及最终认购文件确认自身参与资格。</li>
+<li><strong>投资风险：</strong>投资者可能损失部分或全部本金。参考估值可能发生变化，Kimi 可能不会上市；Kimi K3 的产品能力不代表月之暗面的未来价值、投资收益或本发行表现。</li>
+<li><strong>流动性风险：</strong>认购完成后 DeShare 计划开放平台内交易，但内盘流动性可能有限，不能保证存在买方或卖方，不能保证按指定价格或时间成交，也不能保证交易最终完成；投资者可能需要长期或无法确定期限持有相关份额。</li>
+<li><strong>基金与尽调风险：</strong>因基金方要求，底层境外美元基金资料不对外公开。参与者应在投资前签署 NDA，并审阅基金、法律、托管及交易资料；仅凭公开页面不足以完成充分尽调。</li>
+<li><strong>锁定与解锁风险：</strong>若 Kimi 完成上市，相关份额预计自上市日起锁定 6–12 个月。实际期限及解锁安排取决于上市架构、上市后官方公告及最终文件。本发行不承诺上市日期或确切解锁日期。</li>
+</ul></div>
 ''' + nav("6-2-pre-anthropic-zh.html", "Pre Anthropic", "terms.html", "服务条款"))
 
 EXTRA_HEAD = {

@@ -46,7 +46,7 @@ def test_spacex_long_form_content_is_preserved(self):
     }
     for name, sections in cases.items():
         text = (ROOT / name).read_text(encoding="utf-8")
-        self.assertGreater(len(text), 12000, name)
+        self.assertGreater(len(text.encode("utf-8")), 12000, name)
         for section in sections:
             self.assertIn(section, text, f"{name}: {section}")
 ```

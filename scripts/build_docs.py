@@ -14,7 +14,8 @@ def head(kicker, title, lede):
 </header>'''
 
 
-def shell(title, key, body, lang="en"):
+def shell(title, key, body, lang="en", extra_head=""):
+    extra_head_line = f"{extra_head}\n" if extra_head else ""
     return f'''<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -22,7 +23,7 @@ def shell(title, key, body, lang="en"):
 <meta name="description" content="Evidence-first DeShare protocol documentation">
 <title>{title} · DeShare Documentation</title>
 <link rel="icon" href="logo.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+{extra_head_line}<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
 </head>
 <body data-page="{key}">
 <header class="site-header">
@@ -42,6 +43,10 @@ def nav(prev_href, prev_label, next_href, next_label):
 
 def campaign_head(kicker, title, lede, side):
     return f'<div class="campaign-hero">{head(kicker, title, lede)}<aside class="parameter-panel">{side}</aside></div>'
+
+
+def campaign_fragment(name):
+    return (ROOT / "content" / "campaigns" / name).read_text(encoding="utf-8")
 
 
 PAGES = {}
@@ -317,25 +322,19 @@ PAGES["5-faq.html"] = ("Operational FAQ", "faq", "en", head(
 <h2>How can I review the Kimi fund?</h2><p>Contact <a href="mailto:bd@deshare.finance">bd@deshare.finance</a> for NDA-gated materials.</p>
 ''' + nav("5-2-contract-reference.html", "Contract reference", "6-1-pre-spacex-en.html", "Offerings"))
 
-PAGES["6-1-pre-spacex-en.html"] = ("Pre SpaceX", "spacex-en", "en", campaign_head(
-    "Offering / Operator disclosed", "Pre SpaceX",
-    "Economic exposure linked to an offshore fund holding SpaceX equity. This is not direct ownership of SpaceX shares.",
-    '<span class="metric">PreSPX</span><span class="metric-label">Token label</span><p>77,400 max supply<br>6.46 USDT unit price<br>5% subscription fee<br>15% performance carry</p>'
-) + '''
-<div class="language-switch"><a href="6-1-pre-spacex-zh.html">中文</a><a href="6-1-pre-spacex-en.html">English</a></div>
-<h2>Structure and lifecycle</h2><p>Campaign materials describe a DigiFT-linked asset mapping and lottery allocation. Unallocated principal and the corresponding fee are stated to be refunded. Allocated tokens may trade on the campaign OTC venue.</p>
-<div class="callout risk"><strong>Risk and rights.</strong> No direct ownership, voting, dividend or information rights; no SpaceX affiliation; limited liquidity; possible partial or total loss; unavailable to US, Mainland China and other restricted users.</div>
-''' + nav("5-faq.html", "Documentation", "6-2-pre-anthropic-en.html", "Pre Anthropic"))
+PAGES["6-1-pre-spacex-en.html"] = (
+    "Pre SpaceX",
+    "spacex-en",
+    "en",
+    campaign_fragment("spacex-en.html"),
+)
 
-PAGES["6-1-pre-spacex-zh.html"] = ("Pre SpaceX", "spacex-zh", "zh-CN", campaign_head(
-    "发行计划 / 运营方披露", "Pre SpaceX",
-    "通过境外基金所持 SpaceX 股权取得经济收益敞口，不构成对 SpaceX 股份的直接持有。",
-    '<span class="metric">PreSPX</span><span class="metric-label">代币名称</span><p>最大发行 77,400 份<br>每份 6.46 USDT<br>认购费 5%<br>收益分成 15%</p>'
-) + '''
-<div class="language-switch"><a href="6-1-pre-spacex-zh.html">中文</a><a href="6-1-pre-spacex-en.html">English</a></div>
-<h2>结构与生命周期</h2><p>活动资料描述了与 DigiFT 相关的资产映射及抽签分配机制，未获分配部分的本金及对应费用按规则退回；获配代币可按平台规则在 OTC 市场交易。</p>
-<div class="callout risk"><strong>权利与风险。</strong> 不享有直接股权、投票权、分红权或信息权；与 SpaceX 无关联；可能缺乏流动性并损失部分或全部本金；美国、中国大陆及其他受限地区用户不得参与。</div>
-''' + nav("5-faq.html", "技术文档", "6-2-pre-anthropic-zh.html", "Pre Anthropic"))
+PAGES["6-1-pre-spacex-zh.html"] = (
+    "Pre SpaceX",
+    "spacex-zh",
+    "zh-CN",
+    campaign_fragment("spacex-zh.html"),
+)
 
 PAGES["6-2-pre-anthropic-en.html"] = ("Pre Anthropic", "anthropic-en", "en", campaign_head(
     "Offering / Operator disclosed", "Pre Anthropic",
@@ -391,7 +390,15 @@ PAGES["6-3-pre-kimi-zh.html"] = ("Pre Kimi", "kimi-zh", "zh-CN", campaign_head(
 <div class="callout risk"><strong>权利与风险。</strong> PreKimiToken 尚未公布合约地址，本页不将其描述为已部署。除非正式文件另有约定，其不代表目标公司的直接股份、投票权、信息权或分红权。估值可能变化，投资者可能损失部分或全部本金。</div>
 ''' + nav("6-2-pre-anthropic-zh.html", "Pre Anthropic", "terms.html", "服务条款"))
 
+EXTRA_HEAD = {
+    "6-1-pre-spacex-en.html": '<link rel="stylesheet" href="assets/styles/spacex-en.css">',
+    "6-1-pre-spacex-zh.html": '<link rel="stylesheet" href="assets/styles/spacex-zh.css">',
+}
+
 for filename, (title, key, lang, body) in PAGES.items():
-    (ROOT / filename).write_text(shell(title, key, body, lang), encoding="utf-8")
+    (ROOT / filename).write_text(
+        shell(title, key, body, lang, EXTRA_HEAD.get(filename, "")),
+        encoding="utf-8",
+    )
 
 print(f"Generated {len(PAGES)} documentation pages")

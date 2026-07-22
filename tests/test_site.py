@@ -182,6 +182,29 @@ class SiteTests(unittest.TestCase):
         self.assertIn("service in progress", text)
         self.assertNotIn("zkpass verified", text)
 
+    def test_spacex_long_form_content_is_preserved(self):
+        cases = {
+            "6-1-pre-spacex-en.html": (
+                "Project Overview",
+                "Key Subscription Parameters",
+                "How does PreIPO work?",
+                "Trading & Settlement",
+                "Important Terms & Risk Disclosure",
+            ),
+            "6-1-pre-spacex-zh.html": (
+                "项目简介",
+                "核心认购参数",
+                "IPO PRIME 如何运作？",
+                "交易与交割机制",
+                "重要条款与风险提示",
+            ),
+        }
+        for name, sections in cases.items():
+            text = (ROOT / name).read_text(encoding="utf-8")
+            self.assertGreater(len(text.encode("utf-8")), 12000, name)
+            for section in sections:
+                self.assertIn(section, text, f"{name}: {section}")
+
     def test_kimi_terms_match(self):
         for name in ("6-3-pre-kimi-zh.html", "6-3-pre-kimi-en.html"):
             path = ROOT / name

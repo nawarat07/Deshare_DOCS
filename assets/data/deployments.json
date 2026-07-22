@@ -1,0 +1,72 @@
+{
+  "lastVerified": "2026-07-22",
+  "verificationMethod": "Public JSON-RPC reads and EIP-1967 implementation storage",
+  "networks": [
+    {
+      "network": "Arbitrum One",
+      "environment": "Production",
+      "chainId": 42161,
+      "status": "active",
+      "rpc": "https://arb1.arbitrum.io/rpc",
+      "explorer": "https://arbiscan.io",
+      "lastVerified": "2026-07-22",
+      "contracts": {
+        "proxy": "0x9748C6B5E16599E78351339CA2E24268B5C39C3E",
+        "implementation": "0x43AEaF1BE7c6f22DDc59D2339Ee103c537F4318F",
+        "factory": "0x4D823Cdbbc26078Cc026229622a9ae169Eb94b43",
+        "settlementToken": "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9",
+        "owner": "0xA1107e707aDde5E98255988163DBb48BEFA2BBd1"
+      },
+      "parameters": {
+        "globalFeeBps": 15,
+        "ipoFeeBps": 1800,
+        "minimumFeeBaseUnits": 1000000,
+        "minimumFeeDisplay": "1 USDT"
+      }
+    },
+    {
+      "network": "Ethereum Sepolia",
+      "environment": "Testnet",
+      "chainId": 11155111,
+      "status": "test",
+      "rpc": "https://ethereum-sepolia-rpc.publicnode.com",
+      "explorer": "https://sepolia.etherscan.io",
+      "lastVerified": "2026-07-22",
+      "contracts": {
+        "proxy": "0x07B179A011e6FB72F09A5DEc685c285c22d0b3c9",
+        "implementation": "0xdACAdbb693FcEba041aBa6592825a15C161AE8c9",
+        "factory": "0x02d9522050fdF26ad53252D1B8136a78eFeD3592",
+        "settlementToken": "0xB3F6C6c925b9f3D24A3775FF7a81FddED8EbA9E0",
+        "owner": "0x7d677294C6361f76B79e08402Ced75f4546e92cb"
+      },
+      "parameters": {
+        "globalFeeBps": 100,
+        "ipoFeeBps": 5,
+        "minimumFeeBaseUnits": 500000,
+        "minimumFeeDisplay": "0.5 test USDC"
+      }
+    },
+    {
+      "network": "Monad",
+      "environment": "Production / early network",
+      "chainId": 143,
+      "status": "experimental",
+      "rpc": "https://rpc1.monad.xyz",
+      "explorer": "https://monadscan.com",
+      "lastVerified": "2026-07-22",
+      "contracts": {
+        "proxy": "0x66da08c521323a094cc5fb5c9f37e43e8884c1b0",
+        "implementation": "0x3765fEd8439E7F3B202645B6514C13a7DC6D1976",
+        "factory": "0x61feD6aF9836E8e6cA82099C698095cBd27D0c13",
+        "settlementToken": "0x754704Bc059F8C67012fEd69BC8A327a5aafb603",
+        "owner": "0x73d8DF98D6159BcBD82a5a7495c58c9105928186"
+      },
+      "parameters": {
+        "globalFeeBps": 10,
+        "ipoFeeBps": 5,
+        "minimumFeeBaseUnits": 1000000,
+        "minimumFeeDisplay": "1 USDT"
+      }
+    }
+  ]
+}

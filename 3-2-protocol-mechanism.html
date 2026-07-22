@@ -1,131 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3.2 Protocol Mechanism - DeShare Whitepaper</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Order lifecycle · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
 </head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="DeShare Logo">
-        </div>
-    </header>
-
-    <div class="layout">
-        <aside class="sidebar">
-            <nav>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">1. Overview</span>
-                    <a href="index.html">1. Executive Summary</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">2. Platform Features</span>
-                    <a href="2-platform-features.html">Platform Overview</a>
-                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
-                    <a href="2-2-product-suite.html" class="sub-link">2.2 The DeShare Solution</a>
-                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">3. Architecture</span>
-                    <a href="3-architecture.html">System Architecture</a>
-                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
-                    <a href="3-2-protocol-mechanism.html" class="sub-link active">3.2 Protocol Mechanism</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">4. Security</span>
-                    <a href="4-security.html">Security Framework</a>
-                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">5. Appendices</span>
-                    <a href="5-faq.html">5. Q&A</a>
-                </div>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">6. Campaigns</span>
-                    <a href="6-1-pre-spacex-en.html" class="sub-link">Pre SpaceX (EN)</a>
-                    <a href="6-2-pre-anthropic-zh.html" class="sub-link">Pre Anthropic (中文)</a>
-                    <a href="6-2-pre-anthropic-en.html" class="sub-link">Pre Anthropic (EN)</a>
-                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (ZH)</a>
-                </div>
-
-            
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">7. Legal</span>
-                    <a href="terms.html" class="sub-link">Terms of Service</a>
-                    <a href="privacy.html" class="sub-link">Privacy Policy</a>
-                </div>
-
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <h1>3.2 Protocol Mechanism</h1>
-
-            <img src="assets/protocol-mechanism.svg" alt="Protocol Mechanism Diagram" class="content-image">
-
-            <section>
-                <h3>Execution Layer Fundamentals</h3>
-                <p>The DeShare protocol unequivocally functions as the foundational, non-custodial execution layer for
-                    practically all newly minted on-chain stock assets. It is natively engineered entirely from scratch
-                    to robustly facilitate strictly secure, fundamentally transparent, and highly efficient capital
-                    asset trading by rigorously leveraging a profoundly optimized request-for-quote (RFQ) consensus
-                    model.</p>
-            </section>
-
-            <section>
-                <h3>The Request-for-Quote (RFQ) Model</h3>
-                <p>At the beating mathematical heart of the DeShare trading mechanism lies the heavily integrated RFQ
-                    paradigm. This actively promotes fair retail block pricing exclusively through high-frequency
-                    competitive algorithmic bidding successfully executed amongst heavily vetted institutional-grade
-                    market makers—tactically eliminating almost all MEV (Miner Extractable Value) vulnerabilities and
-                    viciously combating front-running bot risks.</p>
-                <ul>
-                    <li><strong>Market Maker Competition:</strong> When a user initiates a discrete trade intention on
-                        the localized UI interface, our backend infrastructure securely broadcasts an encrypted RFQ
-                        message directly to a rigorous, low-latency network of pre-approved, well-capitalized market
-                        makers. These independent actors then immediately compute and compete aggressively to
-                        definitively provide the absolute best possible binding bid or ask price.</li>
-                    <li><strong>Execution Certainty Analytics:</strong> This nuanced model categorically helps
-                        institutional and retail actors alike in predictably achieving consistently superior execution
-                        spread prices frequently far better compared to a rudimentary AMM pool or an easily manipulated
-                        traditional EVM order book. By structurally tapping immediately into fundamentally deeper
-                        private liquidity pools, market price impact curves are profoundly flattened.</li>
-                </ul>
-            </section>
-
-            <section>
-                <h3>Immutable Cryptographic Logic</h3>
-                <ul>
-                    <li><strong>Cryptographically Signed Escrow Quotes:</strong> Every active quote computationally
-                        submitted by a certified market maker is unconditionally signed immediately using their uniquely
-                        corresponding secure ECDSA private key. This exact elliptic-curve signature functionally acts as
-                        a mathematically unforgeable digital proof guaranteeing the definitive origin and the specific,
-                        immutable transactional terms (precise asset price, total token quantity, millisecond expiry
-                        time window) of the quote itself.</li>
-                    <li><strong>Atomic Smart Settlement:</strong> The fully operational, end-to-end continuous
-                        transaction lifecycle—from the distinct moment of initial cryptographic quote acceptance to the
-                        final, irrevocable ledger settlement—is autonomously governed, relentlessly monitored, and
-                        strictly enforced unilaterally by comprehensively verified, immutable smart contracts.</li>
-                </ul>
-            </section>
-
-            <div class="nav-buttons">
-                <a href="3-1-technical-architecture.html" class="nav-button">← Prev: 3.1 Technical Layers</a>
-                <a href="4-security.html" class="nav-button">Next Section: Security Framework →</a>
-            </div>
-        </main>
-    </div>
-</body>
-
-</html>
+<body data-page="order-lifecycle">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Architecture / 03</p><h1>Event-based order lifecycle</h1><p class="lede">The implemented contract is an event-driven coordination layer. It does not contain the ECDSA RFQ quote-validation path previously described by this site.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>State held on-chain</h2><ul><li>Receiver, USDT, factory, fee and owner configuration.</li><li>ERC-20 balances and allowances.</li><li>Order nonce and create/fill/cancel logs.</li></ul>
+<h2>State not held on-chain</h2><ul><li>An order struct containing original terms.</li><li>A pending / filled / cancelled state machine.</li><li>Broker execution price or trade confirmation.</li><li>A signed market-maker quote validated by the supplied implementation.</li></ul>
+<div class="callout risk"><span class="badge open">Open finding MED-01</span><p><strong>Events are not enforceable order state.</strong> Privileged calls can emit fill or cancellation without proving order existence, pending status or parameter match.</p></div>
+<h2>Cancellation</h2><p>The user signs an order ID for the API. The privileged backend verifies it and calls <code>markOrderCancelled</code>. Refunds require configured receiver allowances and balances.</p>
+<div class="page-nav"><a href="3-1-technical-architecture.html">← Contracts</a><a href="4-security.html">Security model →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

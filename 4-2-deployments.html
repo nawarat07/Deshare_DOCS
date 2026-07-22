@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Deployments · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head>
+<body data-page="deployments">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Verification / 03</p><h1>Verified deployments</h1><p class="lede">Addresses and parameters below were read from public RPC endpoints on 2026-07-22. Re-check before approving tokens or sending a transaction.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>Arbitrum One · production</h2><div class="address-list">
+<div class="address-row"><span class="label">Chain ID</span><span class="address">42161</span><a class="external" href="https://arbiscan.io" target="_blank" rel="noopener noreferrer">Explorer ↗</a></div>
+<div class="address-row"><span class="label">Trading proxy</span><span class="address">0x9748C6B5E16599E78351339CA2E24268B5C39C3E</span><a class="external" href="https://arbiscan.io/address/0x9748C6B5E16599E78351339CA2E24268B5C39C3E#code" target="_blank" rel="noopener noreferrer">Code ↗</a></div>
+<div class="address-row"><span class="label">Implementation</span><span class="address">0x43AEaF1BE7c6f22DDc59D2339Ee103c537F4318F</span><a class="external" href="https://arbiscan.io/address/0x43AEaF1BE7c6f22DDc59D2339Ee103c537F4318F#code" target="_blank" rel="noopener noreferrer">Code ↗</a></div>
+<div class="address-row"><span class="label">Token factory</span><span class="address">0x4D823Cdbbc26078Cc026229622a9ae169Eb94b43</span><a class="external" href="https://arbiscan.io/address/0x4D823Cdbbc26078Cc026229622a9ae169Eb94b43#code" target="_blank" rel="noopener noreferrer">Code ↗</a></div>
+<div class="address-row"><span class="label">Settlement USDT</span><span class="address">0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9</span><a class="external" href="https://arbiscan.io/address/0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9" target="_blank" rel="noopener noreferrer">Token ↗</a></div>
+<div class="address-row"><span class="label">Owner</span><span class="address">0xA1107e707aDde5E98255988163DBb48BEFA2BBd1</span><a class="external" href="https://arbiscan.io/address/0xA1107e707aDde5E98255988163DBb48BEFA2BBd1" target="_blank" rel="noopener noreferrer">Account ↗</a></div></div>
+<div class="grid three"><article class="card"><span class="metric">0.15%</span><span class="metric-label">Global fee · 15 bps</span></article><article class="card"><span class="metric">18%</span><span class="metric-label">IPO fee · 1800 bps</span></article><article class="card"><span class="metric">1 USDT</span><span class="metric-label">Minimum fee</span></article></div>
+<h2>Other verified deployments</h2><div class="table-wrap"><table><thead><tr><th>Network</th><th>Status</th><th>Proxy</th><th>Implementation</th><th>Parameters</th></tr></thead><tbody>
+<tr><td>Sepolia · 11155111</td><td>Test</td><td class="address">0x07B179A011e6FB72F09A5DEc685c285c22d0b3c9</td><td class="address">0xdACAdbb693FcEba041aBa6592825a15C161AE8c9</td><td>100 bps global · 5 bps IPO · 0.5 test USDC</td></tr>
+<tr><td>Monad · 143</td><td>Experimental</td><td class="address">0x66da08c521323a094cc5fb5c9f37e43e8884c1b0</td><td class="address">0x3765fEd8439E7F3B202645B6514C13a7DC6D1976</td><td>10 bps global · 5 bps IPO · 1 USDT</td></tr>
+</tbody></table></div>
+<div class="callout verified-callout"><strong>Method.</strong> Non-empty proxy bytecode, EIP-1967 implementation storage, and view calls for owner, fees, settlement token and factory. <a href="assets/data/deployments.json">Machine-readable manifest</a>.</div>
+<div class="page-nav"><a href="4-1-trusted-custody.html">← Custody & reserves</a><a href="4-3-security-audit.html">Security assessment →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

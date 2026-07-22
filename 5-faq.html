@@ -1,167 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5. Q&A - DeShare Whitepaper</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .qa-box {
-            background: rgba(22, 22, 35, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 24px;
-            margin-bottom: 24px;
-            transition: border-color 0.2s;
-        }
-
-        .qa-box:hover {
-            border-color: rgba(33, 210, 210, 0.3);
-        }
-
-        .qa-q {
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-top: 0;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-        }
-
-        .qa-q::before {
-            content: 'Q:';
-            color: var(--accent);
-            font-family: var(--font-mono);
-            font-weight: 700;
-        }
-
-        .qa-a {
-            color: var(--text-secondary);
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
-
-        .qa-a ol {
-            margin: 12px 0 0 0;
-            padding-left: 24px;
-        }
-
-        .qa-a ol li {
-            margin-bottom: 8px;
-        }
-
-        .qa-a ol li::marker {
-            color: var(--accent);
-            font-weight: 600;
-        }
-    </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Operational FAQ · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
 </head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="DeShare Logo">
-        </div>
-    </header>
-
-    <div class="layout">
-        <aside class="sidebar">
-            <nav>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">1. Overview</span>
-                    <a href="index.html">1. Executive Summary</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">2. Platform Features</span>
-                    <a href="2-platform-features.html">Platform Overview</a>
-                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
-                    <a href="2-2-product-suite.html" class="sub-link">2.2 The DeShare Solution</a>
-                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">3. Architecture</span>
-                    <a href="3-architecture.html">System Architecture</a>
-                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
-                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">4. Security</span>
-                    <a href="4-security.html">Security Framework</a>
-                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">5. Appendices</span>
-                    <a href="5-faq.html" class="active">5. Q&A</a>
-                </div>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">6. Campaigns</span>
-                    <a href="6-1-pre-spacex-en.html" class="sub-link">Pre SpaceX (EN)</a>
-                    <a href="6-2-pre-anthropic-zh.html" class="sub-link">Pre Anthropic (中文)</a>
-                    <a href="6-2-pre-anthropic-en.html" class="sub-link">Pre Anthropic (EN)</a>
-                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (ZH)</a>
-                </div>
-
-            
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">7. Legal</span>
-                    <a href="terms.html" class="sub-link">Terms of Service</a>
-                    <a href="privacy.html" class="sub-link">Privacy Policy</a>
-                </div>
-
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <h1>5. Frequently Asked Questions</h1>
-
-            <div class="qa-box">
-                <h3 class="qa-q">How do you ensure the stocks I purchase are backed by real underlying assets?</h3>
-                <p class="qa-a">We maintain a strict 1:1 peg to real-world blue-chip stocks through a transparent
-                    custodial structure. The underlying assets are purchased and held in segregated accounts with our
-                    primary brokerage partner, Interactive Brokers. Additionally, all transactions are recorded
-                    on-chain, allowing anyone to independently verify the asset backing.</p>
-            </div>
-
-            <div class="qa-box">
-                <h3 class="qa-q">How do I fund my account and start trading?</h3>
-                <div class="qa-a">
-                    <p>The DeShare protocol is non-custodial, meaning you never have to deposit fiat funds into a
-                        centralized platform. To start trading:</p>
-                    <ol>
-                        <li>Connect your preferred Web3 wallet (e.g., MetaMask, Rabby, WalletConnect).</li>
-                        <li>Ensure your wallet holds standard stablecoins (like USDT or USDC).</li>
-                        <li>When you place an order, our audited smart contract automatically swaps your stablecoin for
-                            the tokenized asset. When you sell, the proceeds are routed directly back to your wallet.
-                        </li>
-                    </ol>
-                </div>
-            </div>
-
-            <div class="qa-box">
-                <h3 class="qa-q">Will my trades suffer from slippage or poor pricing?</h3>
-                <p class="qa-a">We minimize slippage by using a dual-layer RFQ (Request for Quote) execution model.
-                    This model draws liquidity from both our on-chain pools and the aggregated order books of our
-                    partnered traditional brokerages. By routing your order to multiple competitive market makers, we
-                    ensure execution prices that are comparable to—and often better than—traditional retail brokerages.
-                </p>
-            </div>
-
-            <div class="nav-buttons">
-                <a href="4-1-trusted-custody.html" class="nav-button">← Prev: 4.1 Trusted Custody</a>
-                <div></div>
-            </div>
-        </main>
-    </div>
-</body>
-
-</html>
+<body data-page="faq">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Developers / 04</p><h1>Operational FAQ</h1><p class="lede">Answers are scoped to available evidence and point to the exact place a reader can verify or challenge them.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>How do I verify the implementation?</h2><p>Read the EIP-1967 slot and compare it with <a href="4-2-deployments.html">Deployments</a>.</p>
+<h2>Does the audit cover deployed bytecode?</h2><p>No commit, address or bytecode hash is named, so bytecode equivalence is not claimed.</p>
+<h2>Are orders fully on-chain?</h2><p>Transfers and events are on-chain. Brokerage execution and order reconciliation are operational dependencies.</p>
+<h2>How do I calculate fees?</h2><p>Call <code>calculateFee(orderValue, assetType)</code> on the active proxy.</p>
+<h2>Where is the reserve proof?</h2><p>The zkPass URL is on the custody page; its human-readable view is still in progress.</p>
+<h2>How can I review the Kimi fund?</h2><p>Contact <a href="mailto:bd@deshare.finance">bd@deshare.finance</a> for NDA-gated materials.</p>
+<div class="page-nav"><a href="5-2-contract-reference.html">← Contract reference</a><a href="6-1-pre-spacex-en.html">Offerings →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

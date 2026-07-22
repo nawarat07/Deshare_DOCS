@@ -1,127 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4.1 Trusted Custody - DeShare Whitepaper</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Custody and reserves · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
 </head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="DeShare Logo">
-        </div>
-    </header>
-
-    <div class="layout">
-        <aside class="sidebar">
-            <nav>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">1. Overview</span>
-                    <a href="index.html">1. Executive Summary</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">2. Platform Features</span>
-                    <a href="2-platform-features.html">Platform Overview</a>
-                    <a href="2-1-core-features.html" class="sub-link">2.1 Core Features</a>
-                    <a href="2-2-product-suite.html" class="sub-link">2.2 The DeShare Solution</a>
-                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">3. Architecture</span>
-                    <a href="3-architecture.html">System Architecture</a>
-                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
-                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">4. Security</span>
-                    <a href="4-security.html">Security Framework</a>
-                    <a href="4-1-trusted-custody.html" class="sub-link active">4.1 Trusted Custody</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">5. Appendices</span>
-                    <a href="5-faq.html">5. Q&A</a>
-                </div>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">6. Campaigns</span>
-                    <a href="6-1-pre-spacex-en.html" class="sub-link">Pre SpaceX (EN)</a>
-                    <a href="6-2-pre-anthropic-zh.html" class="sub-link">Pre Anthropic (中文)</a>
-                    <a href="6-2-pre-anthropic-en.html" class="sub-link">Pre Anthropic (EN)</a>
-                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (ZH)</a>
-                </div>
-
-            
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">7. Legal</span>
-                    <a href="terms.html" class="sub-link">Terms of Service</a>
-                    <a href="privacy.html" class="sub-link">Privacy Policy</a>
-                </div>
-
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <h3 class="accent-text" style="margin-top:0;">[ TRUSTED CUSTODY ]</h3>
-            <h1 style="margin-top:10px;">4.1 Your Assets, Held by Trusted Institutions</h1>
-
-            <p
-                style="text-align: center; font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px auto; color: var(--text-secondary);">
-                All underlying assets are strictly and continually kept in entirely segregated fiduciary accounts at
-                <strong>Interactive Brokers (IBKR)</strong>, an enduringly highly regulated NYSE-listed financial
-                institution, permanently ensuring your on-chain investments remain tangibly secure, fundamentally
-                transparent, and meticulously fully compliant.
-            </p>
-
-            <div class="custody-flow">
-                <div class="custody-row">
-                    <div class="custody-box highlight">
-                        <h4>On-Chain Orders</h4>
-                        <p class="subtitle">Broker-Consistent Transparent Pricing</p>
-                    </div>
-                    <div class="custody-box">
-                        <h4>Tokenized Stock Tokens</h4>
-                        <p class="subtitle">1:1 Real-Time Custodial Attestation, Independently Verifiable</p>
-                    </div>
-                </div>
-
-                <div class="custody-row">
-                    <div class="custody-box">
-                        <h4>Deep Institutional Liquidity</h4>
-                        <div style="display: flex; gap: 10px; margin-top: 20px;">
-                            <div
-                                style="flex: 1; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85em;">
-                                IBKR Regulated Order Flow</div>
-                            <div
-                                style="flex: 1; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; font-size: 0.85em;">
-                                DeShare Private Order Flow</div>
-                        </div>
-                    </div>
-                    <div class="custody-box">
-                        <h4>Backed Exclusively by Authentic Real Stocks</h4>
-                        <p style="font-size: 0.9em; margin-top: 15px; color: var(--text-secondary);">Unwavering direct
-                            secondary-market proactive purchasing combined simultaneously with absolute segregation
-                            directly within primary traditional financial rails flawlessly guarantees the undeniably
-                            distinct intrinsic tangible backing of every single solitary one of your tokenized on-chain
-                            assets.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="nav-buttons">
-                <a href="4-security.html" class="nav-button">← Prev: Security Framework</a>
-                <a href="5-faq.html" class="nav-button">Next Section: 5. Q&A →</a>
-            </div>
-        </main>
-    </div>
-</body>
-
-</html>
+<body data-page="reserves">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Verification / 02</p><h1>Custody and reserve evidence</h1><p class="lede">On-chain supply is observable. Matching underlying assets remain off-chain facts that must be established per product and reporting period.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>Evidence chain</h2><div class="sequence">
+<div class="sequence-step"><h3>Read token supply</h3><p><span class="badge verified">On-chain verified</span> Inspect token balances and mint/burn events.</p></div>
+<div class="sequence-step"><h3>Identify legal holder</h3><p><span class="badge disclosed">Operator disclosed</span> Product documents identify issuer, fund, broker or custodian.</p></div>
+<div class="sequence-step"><h3>Verify external data</h3><p><span class="badge assessed">Third-party assessed</span> zkPass is intended to prove selected account facts while preserving confidentiality.</p></div>
+<div class="sequence-step"><h3>Match scope and time</h3><p>Confirm proof covers the exact product, asset, account and measurement time.</p></div></div>
+<div class="callout"><p><span class="badge unavailable">Service in progress</span></p><p>The zkPass service is temporarily linked at <a href="https://dshare-zkfetch.zkpass.org" target="_blank" rel="noopener noreferrer">dshare-zkfetch.zkpass.org</a>. Its root returned not found on 2026-07-22 and did not expose a readable proof, so no completed-proof status is shown.</p></div>
+<h2>Product distinctions</h2><div class="table-wrap"><table><thead><tr><th>Product</th><th>Custody statement</th><th>Status</th></tr></thead><tbody>
+<tr><td>General stock tokens</td><td>Institutional brokerage arrangement described by operator.</td><td><span class="badge disclosed">Operator disclosed</span></td></tr>
+<tr><td>SpaceX / Anthropic</td><td>DigiFT-linked fund mapping in campaign materials.</td><td><span class="badge disclosed">Operator disclosed</span></td></tr>
+<tr><td>Kimi</td><td>Hong Kong LPF; offshore fund identity under NDA.</td><td><span class="badge unavailable">Available under NDA</span></td></tr>
+</tbody></table></div>
+<div class="page-nav"><a href="4-security.html">← Security model</a><a href="4-2-deployments.html">Deployments →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Security assessment · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head>
+<body data-page="audit">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Verification / 04</p><h1>Aegixe security assessment</h1><p class="lede">The report found no confirmed Critical or High vulnerability, one Medium design risk and one Low centralized-control risk. Both findings remain visible.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<div class="severity"><div class="severity-item"><b>0</b>0 Critical</div><div class="severity-item"><b>0</b>0 High</div><div class="severity-item medium"><b>1</b>1 Medium</div><div class="severity-item low"><b>1</b>1 Low</div></div>
+<div class="finding"><div class="finding-head"><h3>MED-01 · Event-only orders</h3><span class="badge open">Open</span></div><p>No verifiable order state or enforced lifecycle transition.</p></div>
+<div class="finding"><div class="finding-head"><h3>LOW-01 · Administrator controls</h3><span class="badge open">Open</span></div><p>Owner controls receivers, addresses, fees, minting, burning, withdrawals and upgrades.</p></div>
+<h2>Report artifact</h2><div class="card"><p><strong>Assessor:</strong> Aegixe<br><strong>Assessment date:</strong> 2026-04-27<br><strong>Scope:</strong> StockTrading, StockTokenFactory and StandardStockToken</p><p class="address">SHA-256 · 437d248e1d4854e3342d6085d08fd7ab466591e3bb4df6dbd4ca31b04a77e7d2</p><p><a href="assets/reports/deshare-stock-contract-security-assessment-aegixe-2026-04-27.pdf">Download original PDF</a></p></div>
+<div class="callout risk"><strong>Limitations.</strong> No Git commit, deployment address, bytecode hash or remediation table is identified. The overview page also says Base DeFi staking/settlement while detailed scope says stock contracts. Bytecode equivalence is not claimed.</div>
+<div class="page-nav"><a href="4-2-deployments.html">← Deployments</a><a href="5-developer-docs.html">Developer overview →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

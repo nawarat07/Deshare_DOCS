@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>API reference · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head>
+<body data-page="api">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Developers / 02</p><h1>REST API reference</h1><p class="lede">The supplied integration document identifies a production API base and two portfolio operations. These examples are operator-documented and not independently authenticated here.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<div class="callout"><span class="badge disclosed">Operator documented</span><p><strong>Base:</strong> <code>https://api.deshare.finance/api/v1/</code>. Use documented resource paths.</p></div>
+<h2>GET /portfolio/positions/{symbol}</h2><p>Returns position details for one symbol. Required header: <code>X-User-Address</code>.</p>
+<pre>fetch(API_BASE_URL + '/portfolio/positions/AAPL', {
+  headers: { accept: 'application/json', 'X-User-Address': userAddress }
+});</pre>
+<h2>POST /portfolio/cancel-order</h2><p>The user signs the order ID. The backend verifies the recovered signer and invokes privileged cancellation.</p>
+<pre>const signature = await signer.signMessage(orderId);
+fetch(API_BASE_URL + '/portfolio/cancel-order', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ order_id: orderId, signature, user_address: userAddress })
+});</pre>
+<div class="callout risk"><strong>Not user-executed on-chain.</strong> Cancellation depends on API acceptance, owner action, receiver allowances and balances.</div>
+<div class="page-nav"><a href="5-developer-docs.html">← Developer overview</a><a href="5-2-contract-reference.html">Contract reference →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

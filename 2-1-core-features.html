@@ -1,119 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2.1 Core Features - DeShare Whitepaper</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Transaction lifecycle · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
 </head>
-
-<body>
-    <header>
-        <div class="logo">
-            <img src="logo.svg" alt="DeShare Logo">
-        </div>
-    </header>
-
-    <div class="layout">
-        <aside class="sidebar">
-            <nav>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">1. Overview</span>
-                    <a href="index.html">1. Executive Summary</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">2. Platform Features</span>
-                    <a href="2-platform-features.html">Platform Overview</a>
-                    <a href="2-1-core-features.html" class="sub-link active">2.1 Core Features</a>
-                    <a href="2-2-product-suite.html" class="sub-link">2.2 The DeShare Solution</a>
-                    <a href="2-3-ipo-investing.html" class="sub-link">2.3 IPO Investing</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">3. Architecture</span>
-                    <a href="3-architecture.html">System Architecture</a>
-                    <a href="3-1-technical-architecture.html" class="sub-link">3.1 Technical Layers</a>
-                    <a href="3-2-protocol-mechanism.html" class="sub-link">3.2 Protocol Mechanism</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">4. Security</span>
-                    <a href="4-security.html">Security Framework</a>
-                    <a href="4-1-trusted-custody.html" class="sub-link">4.1 Trusted Custody</a>
-                </div>
-
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">5. Appendices</span>
-                    <a href="5-faq.html">5. Q&A</a>
-                </div>
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">6. Campaigns</span>
-                    <a href="6-1-pre-spacex-en.html" class="sub-link">Pre SpaceX (EN)</a>
-                    <a href="6-2-pre-anthropic-zh.html" class="sub-link">Pre Anthropic (中文)</a>
-                    <a href="6-2-pre-anthropic-en.html" class="sub-link">Pre Anthropic (EN)</a>
-                    <a href="6-1-pre-spacex-zh.html" class="sub-link">Pre SpaceX (ZH)</a>
-                </div>
-
-            
-                <div class="sidebar-group">
-                    <span class="sidebar-group-title">7. Legal</span>
-                    <a href="terms.html" class="sub-link">Terms of Service</a>
-                    <a href="privacy.html" class="sub-link">Privacy Policy</a>
-                </div>
-
-            </nav>
-        </aside>
-
-        <main class="main-content">
-            <h3 class="accent-text" style="margin-top:0;">[ GLOBAL ACCESS ]</h3>
-            <h1 style="margin-top:10px;">2.1 Core Features: Trade On-Chain, Anytime</h1>
-
-            <p
-                style="text-align: center; font-size: 1.1rem; max-width: 600px; margin: 0 auto 40px auto; color: var(--text-secondary);">
-                Barrier-free access to global markets, 24/7.<br>
-                Trade 5,000+ stocks in a truly decentralized way — no pre-deposit required.
-            </p>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h4>Spot Trading</h4>
-                    <p class="subtitle">Trade tokenized stocks directly, on-chain.</p>
-                    <p>Buy and sell genuinely tokenized global stocks with transparent on-chain execution. We eliminate
-                        the multi-day friction: no pre-deposit is ever required — you simply connect your wallet and
-                        trade instantly via atomic smart contracts, retaining unmitigated control over your assets up
-                        until the strict execution moment.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>Leverage</h4>
-                    <p class="subtitle">Leverage global markets with flexibility.</p>
-                    <p>Gain institutional access to complex derivative products combined with precise leverage
-                        mechanisms. These instruments are meticulously designed for more advanced trading strategies,
-                        allowing participants to trade with analytical precision while resolutely maintaining an
-                        inherently non-custodial, on-chain security posture.</p>
-                </div>
-
-                <div class="feature-card">
-                    <h4>New Listings</h4>
-                    <p class="subtitle">Discover newly listed tokenized stocks.</p>
-                    <p>Capture initial market momentum by securing critically early access to newly listed tokenized
-                        stocks and emerging, high-growth market opportunities. Seamlessly explore these diverse new
-                        assets as they incrementally become available—all actively facilitated within a singular, highly
-                        secure decentralized trading environment.</p>
-                </div>
-            </div>
-
-            <div class="nav-buttons">
-                <a href="2-platform-features.html" class="nav-button">← Prev: Platform Overview</a>
-                <a href="2-2-product-suite.html" class="nav-button">Next Section: 2.2 The DeShare Solution →</a>
-            </div>
-        </main>
-    </div>
-</body>
-
-</html>
+<body data-page="transactions">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Protocol / 03</p><h1>Transaction lifecycle</h1><p class="lede">The contract records transfers and events. The operational order lifecycle continues off-chain and returns through owner-only functions.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>Buy order</h2><div class="sequence">
+<div class="sequence-step"><h3>Approve settlement token</h3><p>The wallet approves the active proxy for margin, fee and interest.</p></div>
+<div class="sequence-step"><h3>Create the order</h3><p><code>createBuyOrder</code> transfers margin to <code>fundReceiver</code>, collects fee and interest, and emits <code>OrderCreated</code>.</p></div>
+<div class="sequence-step"><h3>Execute off-chain</h3><p>The backend observes the event and manages brokerage execution. This state is not stored in the contract.</p></div>
+<div class="sequence-step"><h3>Complete or cancel</h3><p>The owner emits fill status and mints tokens, or invokes cancellation and refund logic.</p></div></div>
+<h2>Sell order</h2><div class="sequence">
+<div class="sequence-step"><h3>Approve stock token and USDT</h3><p>The wallet approves token margin plus USDT for fee and interest.</p></div>
+<div class="sequence-step"><h3>Create and execute</h3><p>Token margin moves to <code>tokenReceiver</code>; the off-chain operator handles brokerage execution.</p></div>
+<div class="sequence-step"><h3>Reconcile</h3><p>The owner burns stock tokens after execution or invokes the refund path.</p></div></div>
+<div class="callout risk"><strong>Open finding MED-01.</strong> The contract stores no order status and validates no state transition. Events are not a complete on-chain order book.</div>
+<div class="page-nav"><a href="2-platform-features.html">← Capabilities</a><a href="2-2-product-suite.html">Asset model →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

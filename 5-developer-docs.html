@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Developer overview · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head>
+<body data-page="developer">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Developers / 01</p><h1>Integrate against published evidence</h1><p class="lede">Confirm the active proxy, network and settlement token, load the checked-in ABI, then calculate fees from the contract rather than hard-coding historical values.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>Quick start</h2><div class="sequence">
+<div class="sequence-step"><h3>Verify network</h3><p>Arbitrum One chain ID is <code>42161</code>.</p></div>
+<div class="sequence-step"><h3>Load proxy ABI</h3><p>Use the active proxy with <a href="assets/abi/StockTrading.json">StockTrading.json</a>.</p></div>
+<div class="sequence-step"><h3>Read configuration</h3><p>Read settlement token, factory, fee, asset fee and minimum fee.</p></div>
+<div class="sequence-step"><h3>Approve exact assets</h3><p>Show spender and requested amount before ERC-20 approval.</p></div></div>
+<pre>const provider = new ethers.BrowserProvider(window.ethereum);
+const signer = await provider.getSigner();
+const network = await provider.getNetwork();
+if (network.chainId !== 42161n) throw new Error('Switch to Arbitrum One');
+const trading = new ethers.Contract(TRADING_PROXY, STOCK_TRADING_ABI, signer);
+const fee = await trading.calculateFee(orderValue, 1);</pre>
+<div class="grid"><article class="card"><h3><a href="5-1-api-reference.html">REST API</a></h3><p>Portfolio reads and signature-authorized cancellation.</p></article><article class="card"><h3><a href="5-2-contract-reference.html">Contract & ABI</a></h3><p>Functions, events, enums and downloads.</p></article></div>
+<div class="page-nav"><a href="4-3-security-audit.html">← Assessment</a><a href="5-1-api-reference.html">API reference →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>

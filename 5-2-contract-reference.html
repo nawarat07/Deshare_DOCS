@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Evidence-first DeShare protocol documentation">
+<title>Contract and ABI reference · DeShare Documentation</title>
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css"><script src="site.js" defer></script>
+</head>
+<body data-page="contract-reference">
+<header class="site-header">
+<a class="brand" href="index.html"><img src="logo.svg" alt="DeShare"><span class="brand-note">Evidence documentation</span></a>
+<div class="header-status"><span class="status-dot"></span>Chain data checked 2026-07-22</div>
+<button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Toggle documentation navigation">Menu</button>
+</header>
+<div class="site-layout"><aside class="sidebar" data-sidebar><nav data-site-nav aria-label="Documentation"></nav></aside>
+<main class="main-content"><header class="page-head">
+<p class="eyebrow">Developers / 03</p><h1>Contract and ABI reference</h1><p class="lede">Use the active proxy with the ABI below. Order quantity uses 8 decimals; settlement price, fees and interest use 6 decimals.</p>
+<p class="meta">Evidence scope · implementation, public chain state, third-party reports, operator disclosures</p>
+</header>
+<h2>Downloads</h2><p><a href="assets/abi/StockTrading.json">StockTrading.json</a> · <a href="assets/abi/StockTokenFactory.json">StockTokenFactory.json</a> · <a href="assets/abi/StandardStockToken.json">StandardStockToken.json</a></p>
+<h2>Current order signatures</h2><pre>function createBuyOrder(
+ string _stockSymbol, OrderType _orderType, uint256 _amount,
+ uint256 _price, uint256 _expiresAt, uint256 _marginLevel,
+ uint256 _interest, AssetType _assetType
+) returns (uint256 orderId)
+
+function createSellOrder(
+ string _stockSymbol, OrderType _orderType, uint256 _amount,
+ uint256 _price, uint256 _expiresAt, uint256 _marginLevel,
+ uint256 _interest, AssetType _assetType
+) returns (uint256 orderId)</pre>
+<h2>Enums and precision</h2><div class="table-wrap"><table><thead><tr><th>Type</th><th>Values</th></tr></thead><tbody>
+<tr><td><code>OrderType</code></td><td>0 LIMIT · 1 MARKET</td></tr>
+<tr><td><code>AssetType</code></td><td>0 HK · 1 US · 2 SG · 3 JP · 4 KR · 5 IPO · 6 OT</td></tr>
+<tr><td>Stock amount</td><td>8 decimals</td></tr><tr><td>USDT / price / interest</td><td>6 decimals</td></tr>
+</tbody></table></div>
+<h2>Events</h2><p><code>OrderCreated</code>, <code>OrderFilled</code>, <code>OrderCancelled</code>, <code>USDTTransferred</code>, <code>StockTokenTransferred</code>, <code>FeeCharged</code>, <code>StockTokensMinted</code> and <code>StockTokensBurned</code>.</p>
+<div class="callout"><strong>Version correction.</strong> Older five-argument examples do not match the current inspected implementation. This page uses the eight-argument signature.</div>
+<div class="page-nav"><a href="5-1-api-reference.html">← API reference</a><a href="5-faq.html">Operational FAQ →</a></div><p class="footer-note">DeShare documentation · Facts are labeled by evidence type · Last content review 2026-07-22</p></main></div>
+</body></html>
